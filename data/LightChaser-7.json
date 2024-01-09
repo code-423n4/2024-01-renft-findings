@@ -1,0 +1,11 @@
+{
+  "contest": 317,
+  "handle": "LightChaser",
+  "crew": [
+    "ChaseTheLight"
+  ],
+  "risk": "2",
+  "title": "Return of create2 is not checked",
+  "issueId": 7,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/7"
+}
