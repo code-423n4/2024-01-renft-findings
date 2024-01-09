@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "haxatron",
+  "risk": "3",
+  "title": "Gnosis guard can be bypassed via setFallbackHandler",
+  "issueId": 8,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/8"
+}
