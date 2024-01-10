@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "pashap9990",
+  "risk": "3",
+  "title": "skimmedBalance can overflow due to bad call increaseDeposit function and potentially brick the contract",
+  "issueId": 14,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/14"
+}
