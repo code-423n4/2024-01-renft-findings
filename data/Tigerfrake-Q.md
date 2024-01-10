@@ -36,7 +36,7 @@ The value literal 10000 is meant to be used as a divisor in fee calculation in t
 https://github.com/re-nft/smart-contracts/blob/main/src%2Fmodules%2FPaymentEscrow.sol#L90
 
 ### Recommendation:
-I advise the special underscore (_) separator to be applied to it (i.e. 10000 would become 10_000) 
+> I advise the special underscore (_) separator to be applied to it (i.e. 10000 would become 10_000) 
 
 # [04] Possible Unchecked Return Values.
 
@@ -47,4 +47,12 @@ Several function calls within the contract do not check their return values. For
 https://github.com/re-nft/smart-contracts/blob/main/src%2FKernel.sol#L356-L531
 
 ### Recommendation:
-It would be better to add checks after these function calls to handle possible failures.
+> It would be better to add checks after these function calls to handle possible failures.
+
+# [05] Lack of Events.
+
+### Description:
+The contracts emits `events` in some places but not everywhere it should. Emitting events can help external observers track the contract's activity, and it can also make debugging easier. 
+
+### Recommendation:
+> Consider adding events in places where they are missing.
