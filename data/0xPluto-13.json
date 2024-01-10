@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xPluto",
+  "risk": "3",
+  "title": "Domain seperator in Signer.sol can become outdated when chain.id changes.",
+  "issueId": 13,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/13"
+}
