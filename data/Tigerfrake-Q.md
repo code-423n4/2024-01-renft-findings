@@ -22,4 +22,18 @@ The linked variables/functions do not conform to the standard naming convention 
 - https://github.com/re-nft/smart-contracts/blob/main/src%2Fpackages%2FSigner.sol#L29-L39
 
 ### Recommendation:
-> Consider naming conventions utilized by the linked statements are adjusted to reflect the correct type of declaration according to the Solidity. 
+> Consider naming conventions utilized by the linked statements are adjusted to reflect the correct type of declaration according to the Solidity.
+
+# [03] Undocumented Value Literal
+
+### Description:
+The value literal 10000 is meant to be used as a divisor in fee calculation in the `_calculatefee()` function. However, it is undocumented and unclearly depicted.
+
+```Solidity
+        return (amount * fee) / 10000;
+```
+### Instances:
+https://github.com/re-nft/smart-contracts/blob/main/src%2Fmodules%2FPaymentEscrow.sol#L90
+
+### Recommendation:
+I advise the special underscore (_) separator to be applied to it (i.e. 10000 would become 10_000) 
