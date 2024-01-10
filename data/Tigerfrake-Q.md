@@ -37,3 +37,14 @@ https://github.com/re-nft/smart-contracts/blob/main/src%2Fmodules%2FPaymentEscro
 
 ### Recommendation:
 I advise the special underscore (_) separator to be applied to it (i.e. 10000 would become 10_000) 
+
+# [04] Possible Unchecked Return Values.
+
+### Description:
+Several function calls within the contract do not check their return values. For instance, the `_installModule, _upgradeModule, _activatePolicy, _deactivatePolicy, _migrateKernel, _reconfigurePolicies, _setPolicyPermissions`, and `_pruneFromDependents` functions do not check whether the operations were successful or not. 
+
+### Instances:
+https://github.com/re-nft/smart-contracts/blob/main/src%2FKernel.sol#L356-L531
+
+### Recommendation:
+It would be better to add checks after these function calls to handle possible failures.
