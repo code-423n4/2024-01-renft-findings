@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "pashap9990",
+  "risk": "2",
+  "title": "totalTime can overflow if start time would be greater than end time",
+  "issueId": 29,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/29"
+}
