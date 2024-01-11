@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "haxatron",
+  "risk": "3",
+  "title": "If there exists >= 1 whitelisted module, renters can disable the STOP module which prevents NFT lenders from obtaining their NFT back.",
+  "issueId": 16,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/16"
+}
