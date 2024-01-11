@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xAlix2",
+  "risk": "3",
+  "title": "Renters can burn ERC721 offer items through executing TX from the rental safe, allowing them ro grief orders",
+  "issueId": 30,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/30"
+}
