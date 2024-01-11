@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "Alchmy952",
+  "risk": "2",
+  "title": "Potential reentrancy in Kernel.sol",
+  "issueId": 17,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/17"
+}
