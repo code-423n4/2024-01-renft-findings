@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "marqymarq10",
+  "risk": "3",
+  "title": "Renter can steal the NFT from the Gnosis Safe by using the Safe's fallback function",
+  "issueId": 31,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/31"
+}
