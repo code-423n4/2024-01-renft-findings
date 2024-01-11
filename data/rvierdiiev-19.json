@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "rvierdiiev",
+  "risk": "2",
+  "title": "Signer._deriveRentalTypehashes doesn't follow eip712",
+  "issueId": 19,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/19"
+}
