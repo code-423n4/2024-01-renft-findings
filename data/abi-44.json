@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "abi",
+  "risk": "3",
+  "title": "PaymentEscrow does not settle payments for the first item in a list of items",
+  "issueId": 44,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/44"
+}
