@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xAlix2",
+  "risk": "3",
+  "title": "Rental safe owners can disable the stop policy, leading to loss of all tokens in that safe",
+  "issueId": 42,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/42"
+}
