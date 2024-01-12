@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "abi",
+  "risk": "3",
+  "title": "PaymentEscrow does not settle the payment batch for the first order in array RentalOrder[]",
+  "issueId": 46,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/46"
+}
