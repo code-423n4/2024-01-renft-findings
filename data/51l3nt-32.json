@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "51l3nt",
+  "risk": "3",
+  "title": "Integer division rounding can lead to inaccuracy in payments and ultimately loss of funds",
+  "issueId": 32,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/32"
+}
