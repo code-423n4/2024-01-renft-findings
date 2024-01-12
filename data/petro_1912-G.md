@@ -2,10 +2,7 @@ There are unnecessary reading and writing to the storage slots.
 While deactivating a policy, contract find the index of item being deactivated and bring the last item to that index.
 If the item being deactivated is the last item in the array, then no need to access the storage slot, but just need to pop.
 
-`_deactivatePolicy` function in `Kernel` 
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Kernel.sol#L469
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Kernel.sol#L472
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Kernel.sol#L479
+https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Kernel.sol#L469-L479
 
 Kernel.sol
 ```
@@ -90,9 +87,7 @@ function _deactivatePolicy(Policy policy_) internal {
 ```
 
 We can rewrite `_pruneFromDependents` function too.
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Kernel.sol#L601
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Kernel.sol#L604
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Kernel.sol#L611
+https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Kernel.sol#L601-L611
 
 if `origIndex` is the index of last item in dependents, we don't need to write any slots.
 
