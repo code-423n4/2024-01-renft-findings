@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "ravikiranweb3",
+  "risk": "2",
+  "title": "Kernel contract's executor can set admin user, potentially overriding the powers of superior user.",
+  "issueId": 49,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/49"
+}
