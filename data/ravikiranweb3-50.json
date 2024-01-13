@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "ravikiranweb3",
+  "risk": "3",
+  "title": "Update of Kernel contract could break the protocol, due to possible storage collision",
+  "issueId": 50,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/50"
+}
