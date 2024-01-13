@@ -8,3 +8,7 @@ While this is reported as QA error, the risk of losing executor role completely 
 Recommendation is to allow admin to set executor if required.
 
 #### 2) Module.INIT is not implemented for both Storage and Escrow Modules.
+
+#### 3) PaymentEscrow::MODULE_PROXY_INSTANTIATION can be front run by a bad actor
+
+#### 4) Storage::MODULE_PROXY_INSTANTIATION can be front run by a bad actor
