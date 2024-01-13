@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xOmer",
+  "risk": "2",
+  "title": "Policy can be activated more than one time causes DoS",
+  "issueId": 63,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/63"
+}
