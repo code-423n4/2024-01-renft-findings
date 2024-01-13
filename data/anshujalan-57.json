@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "anshujalan",
+  "risk": "2",
+  "title": "Renters can burn rented NFTs if the token contract implements Openzeppelin's ERC721Burnable/ERC1155Burnable interface",
+  "issueId": 57,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/57"
+}
