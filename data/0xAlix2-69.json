@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xAlix2",
+  "risk": "2",
+  "title": "Improper removal of a hook path",
+  "issueId": 69,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/69"
+}
