@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "stackachu",
+  "risk": "3",
+  "title": " Blocklisting in payment ERC20 can cause rented NFT to be stuck in Safe",
+  "issueId": 64,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/64"
+}
