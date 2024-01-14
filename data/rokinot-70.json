@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "rokinot",
+  "risk": "3",
+  "title": "Borrowers can bypass guards and steal the borrowed NFT on certain wrapped collections",
+  "issueId": 70,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/70"
+}
