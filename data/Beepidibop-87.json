@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "Beepidibop",
+  "risk": "3",
+  "title": "`Guard`: Guard Can Be Bypassed By Batching the Lending Tx with a Malicious Tx",
+  "issueId": 87,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/87"
+}
