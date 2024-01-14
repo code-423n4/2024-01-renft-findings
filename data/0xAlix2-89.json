@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xAlix2",
+  "risk": "3",
+  "title": "Safe owners can change the fallback handler of their safe, allowing them to steal all rental asser",
+  "issueId": 89,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/89"
+}
