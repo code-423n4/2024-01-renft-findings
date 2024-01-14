@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "debo",
+  "risk": "3",
+  "title": "Potential violation of Checks-Effects-Interaction pattern in PaymentEscrow.skim",
+  "issueId": 86,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/86"
+}
