@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "SBSecurity",
+  "risk": "3",
+  "title": "OrderMetadata typeHash is not EIP712 compliant",
+  "issueId": 107,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/107"
+}
