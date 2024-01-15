@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "Tendency",
+  "risk": "2",
+  "title": "Creation of a Gnosis Safe via Factory::deployRentalSafe Can be Blocked",
+  "issueId": 114,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/114"
+}
