@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xHelium",
+  "risk": "3",
+  "title": "Anyone can stop a BASE rental at any time before the rentalOrder endTimestamp is reached",
+  "issueId": 134,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/134"
+}
