@@ -106,3 +106,14 @@ pragma solidity ^0.8.20;
 
 ### Recommendation:
 > It's generally recommended to lock the compiler version to avoid these issues.
+
+
+# [10] Missing Value Verification
+
+### Description:
+Certain functions lack a value safety check.
+The values of the arguments should be verified to allow  only the ones that comply with the contract's logic.
+e.g A check should be done to ensure that all the address are different from zero
+
+### Instances:
+https://github.com/re-nft/smart-contracts/blob/main/src%2Fpolicies%2FFactory.sol#L49-L62
