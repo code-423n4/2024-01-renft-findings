@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "kaden",
+  "risk": "2",
+  "title": "Additional ERC1155 tokens with same address and tokenId as rental tokens will be locked for the duration of the rental",
+  "issueId": 124,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/124"
+}
