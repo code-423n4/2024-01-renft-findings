@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xpiken",
+  "risk": "3",
+  "title": "`Stop#stopRent()` and `Stop#stopRentBatch()` might fail if either the lender or the renter is blacklisted, or rental/payment asset is paused",
+  "issueId": 113,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/113"
+}
