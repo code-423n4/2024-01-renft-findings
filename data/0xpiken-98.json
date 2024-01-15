@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xpiken",
+  "risk": "2",
+  "title": "Some of typehash values are not EIP-712 compliant",
+  "issueId": 98,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/98"
+}
