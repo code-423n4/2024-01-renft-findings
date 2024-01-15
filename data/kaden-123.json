@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "kaden",
+  "risk": "3",
+  "title": "onlyByProxy modifier will always revert if a contract inheriting Proxiable is upgraded",
+  "issueId": 123,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/123"
+}
