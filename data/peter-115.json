@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "peter",
+  "risk": "3",
+  "title": "ERC20 Blacklisted Accounts Can DoS PAY order causing rental NFTs to be stuck in safe permanently",
+  "issueId": 115,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/115"
+}
