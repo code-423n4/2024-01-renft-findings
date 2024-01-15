@@ -66,3 +66,16 @@ The time difference between events can be estimated using `block.number` and the
 
 ### Instances:
 https://github.com/re-nft/smart-contracts/blob/main/src%2Fpolicies%2FStop.sol#L132
+
+# [07] Unchecked External Calls
+
+### Description:
+External fucntion calls can introduce vulnerabilities when not properly validated. Trusting external calls without proper checks can lead to unintended behavior or even attacks.
+
+Example: the `increaseDeposit()` function fully trusts that `_increaseDeposit()` function it calls within it will function as intended without any checks for its success
+
+### Instances:
+https://github.com/re-nft/smart-contracts/blob/main/src%2Fmodules%2FPaymentEscrow.sol#L361-L372
+
+### Recommendation:
+> Always check the return value of external calls and handle any errors or exceptions. Implement checks to verify the integrity of your function calls. 
