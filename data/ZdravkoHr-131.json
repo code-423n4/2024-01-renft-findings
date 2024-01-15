@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "ZdravkoHr",
+  "risk": "2",
+  "title": "Rental orders cannot be stopped if a hook's onStop is deactivated",
+  "issueId": 131,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/131"
+}
