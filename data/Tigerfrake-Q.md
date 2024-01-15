@@ -90,3 +90,19 @@ Instead of repeating the same condition check in every function that requires it
 
 - https://github.com/re-nft/smart-contracts/blob/main/src%2Fmodules%2FStorage.sol#L299
 - https://github.com/re-nft/smart-contracts/blob/main/src%2Fmodules%2FStorage.sol#L318
+
+# [09] Floating pragma
+
+### Description:
+The disadvantage of using a floating pragma is that it can lead to inconsistencies and potential bugs. When a contract is compiled with a different compiler version, it might produce different bytecode due to changes in the compiler, even if the source code looks the same. This can lead to unexpected behavior if the contract is deployed on a network with a different compiler version than the one it was tested with.
+
+Moreover, if the contract uses features that were introduced in a newer compiler version, and it gets compiled with an older compiler version, it could fail or behave differently than expected.
+
+### Instances:
+All contracts
+```Solidity
+pragma solidity ^0.8.20;
+```
+
+### Recommendation:
+> It's generally recommended to lock the compiler version to avoid these issues.
