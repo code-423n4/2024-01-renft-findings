@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "Satyam_Sharma",
+  "risk": "2",
+  "title": "whole amount can be taken as a fee therefore 0 `paymentAmount` passes, which could calculate the wrong pro-rata payment for renter and lender ",
+  "issueId": 110,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/110"
+}
