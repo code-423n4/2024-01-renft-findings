@@ -78,4 +78,15 @@ Example: the `increaseDeposit()` function fully trusts that `_increaseDeposit()`
 https://github.com/re-nft/smart-contracts/blob/main/src%2Fmodules%2FPaymentEscrow.sol#L361-L372
 
 ### Recommendation:
-> Always check the return value of external calls and handle any errors or exceptions. Implement checks to verify the integrity of your function calls. 
+> Always check the return value of external calls and handle any errors or exceptions. Implement checks to verify the integrity of your function calls.
+
+# [08] For same condition checks, use modifiers
+
+### Description:
+The main advantage of using modifiers for the same condition checks in different functions is code reusability and readability. 
+Instead of repeating the same condition check in every function that requires it, you can define a modifier once and then apply it to any function that needs it. This makes your code cleaner and easier to maintain.
+
+### Instances:
+
+- https://github.com/re-nft/smart-contracts/blob/main/src%2Fmodules%2FStorage.sol#L299
+- https://github.com/re-nft/smart-contracts/blob/main/src%2Fmodules%2FStorage.sol#L318
