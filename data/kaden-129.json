@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "kaden",
+  "risk": "2",
+  "title": "Lender can prevent stopping a rental by using a contract which doesn't support onERC721Received callback",
+  "issueId": 129,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/129"
+}
