@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "peter",
+  "risk": "2",
+  "title": "Signatures from the permissioned server-side signer can temporarily be replayed across different orders with same rental payload",
+  "issueId": 133,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/133"
+}
