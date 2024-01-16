@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "holydevoti0n",
+  "risk": "2",
+  "title": "Kernel upgrade functions missing validation against address(0)",
+  "issueId": 177,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/177"
+}
