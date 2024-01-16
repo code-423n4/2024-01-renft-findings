@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "kaden",
+  "risk": "3",
+  "title": "It's possible to get onTransaction hooks to fire without actually executing the underlying function",
+  "issueId": 170,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/170"
+}
