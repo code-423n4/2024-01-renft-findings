@@ -1,28 +1,4 @@
-
-# 1. Contracts will have deployment issues due to incompatibility of current solidity version on L2 chains and base chains.
-Links to affected code *
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Kernel.sol#L2
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Create2Deployer.sol#L2
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Admin.sol#L2
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Create.sol#L2
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Factory.sol#L2
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Guard.sol#L2
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Stop.sol#L2
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/packages/Signer.sol#L2
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/packages/Reclaimer.sol#L2
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/packages/Accumulator.sol#L2
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/modules/Storage.sol#L2
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/modules/PaymentEscrow.sol#L2
-
-### Impact
-
-Considering that the the contracts are expected to be deployed on mmainnet, optimism ad base chains, the solidity version that should be in use must be suported by all the chains. However, the contracts in the protocol are using compiler version 0.8.22 which compiles normally on Ethereum mainnet. However, optimism and base chains while EVM-compatible, do not support the PUSH0 opcode which was introduced in the Shanghai hard fork, which is now the default EVM version in the compiler and the one being currently used to compile the project. The 0.8.22 compiler version produces bytecode that contains the PUSH0 opcode. This will result in a failure when trying to deploy the contracts to L2 chains. 
-
-### Recommended Mitigation Steps
-Consider using Solidity compiler version 0.8.19.
-
-
-# 2. `changeKernel` function should check if newKernel == oldkernel
+# 1. `changeKernel` function should check if newKernel == oldkernel
 Links to affected code *
 https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Kernel.sol#L54
 https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Kernel.sol#L516
@@ -38,7 +14,7 @@ Add a same address check to the change kernel function.
         }
 ```
 
-# 3. `executeAction` doesn't provide an error for a non existent action. 
+# 2. `executeAction` doesn't provide an error for a non existent action. 
 Links to affected code *
 https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Kernel.sol#L277C1-L302C6
 ### Impact
@@ -54,7 +30,7 @@ The current implementation emits an event irrespective of whether the action to 
 ```
 
 
-# 4. It's possible to activate a policy multiple times
+# 3. It's possible to activate a policy multiple times
 Links to affected code *
 https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Kernel.sol#L420
 https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Kernel.sol#L458
@@ -97,7 +73,7 @@ Recommend checking for policy's index instead.
 
 ```
 
-# 5. `_deactivatePolicy` lacks checks for policy existence
+# 4. `_deactivatePolicy` lacks checks for policy existence
 Links to affected code *
 https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Kernel.sol#L457C5-L490C6
 ### Impact
@@ -110,7 +86,7 @@ if (activePolicies[idx] != policy) revert Errors.Kernel_PolicyNotRegistered
 ```
 
 
-# 6. Address Collision Risk in `getCreate2Address` function`
+# 5. Address Collision Risk in `getCreate2Address` function`
 Links to affected code *
 https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Create2Deployer.sol#L84
 ### Impact
@@ -121,7 +97,7 @@ Improve the validation logic by incorporating additional checks beyond address c
 
 
 
-# 7. `.freeze` functions should ensure that existing module operations are completely executed before freezing
+# 6. `.freeze` functions should ensure that existing module operations are completely executed before freezing
 Links to affected code *
 https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Admin.sol#L135
 https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Admin.sol#L155
@@ -135,7 +111,7 @@ Freezing the `PaymentEscrow` for instance will result in any unskimmed funds bei
 ### Recommended Mitigation Steps
 Consider implementing the `removeRentals` and `skim` functions in the `freeze` implementations.
 
-# 8. Rental safes can be added but can't be removed
+# 7. Rental safes can be added but can't be removed
 Links to affected code *
 https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/modules/Storage.sol#L274C1-L283C6
 ### Impact
