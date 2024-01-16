@@ -117,3 +117,16 @@ e.g A check should be done to ensure that all the address are different from zer
 
 ### Instances:
 https://github.com/re-nft/smart-contracts/blob/main/src%2Fpolicies%2FFactory.sol#L49-L62
+
+# [11] Typo mistakes
+
+### Description:
+Spelling checks should be done to eliminate typos and aid readability.
+E.g
+```Solidity
+     @return lenderAmount Payment amoutn to send to the lender.
+```
+The `amoutn` should be `amount`
+
+### Instance:
+https://github.com/re-nft/smart-contracts/blob/main/src%2Fmodules%2FPaymentEscrow.sol#L130
