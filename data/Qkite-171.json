@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "Qkite",
+  "risk": "3",
+  "title": "Missing hash parameter can cause safes to be drained",
+  "issueId": 171,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/171"
+}
