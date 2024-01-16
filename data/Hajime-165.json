@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "Hajime",
+  "risk": "2",
+  "title": "digest calculation in ```_recoverSignerFromPayload not follow EIP-712",
+  "issueId": 165,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/165"
+}
