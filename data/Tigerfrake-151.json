@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "Tigerfrake",
+  "risk": "3",
+  "title": "Unvalidated Sender Validation in Contract Deployment Function Leads to Potential Frontrunning Attack",
+  "issueId": 151,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/151"
+}
