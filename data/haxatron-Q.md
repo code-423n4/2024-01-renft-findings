@@ -59,7 +59,7 @@ Since the `asset.rentalId` is generated using the address of the `rentalWallet`,
 
 However, in the offchance the team decides to use versions less than solidity 8.0 in the future, then the consequence is disastrous as the function will not revert and the order hash will be deleted from storage even though the malicious renter supplied the wrong `rentalWallet`, after which the lender can no longer reclaim the rental NFT due to the missing order hash.
 
-Attached is a PoC which demonstrates how a revert occurs due to arithmetic underflow:
+Attached is a PoC which demonstrates how a revert occurs if a malicious renter modifies the `rentalWallet` of the rental order, due to arithmetic underflow:
 
 ```solidity
 // SPDX-License-Identifier: BUSL-1.1
@@ -175,6 +175,18 @@ contract FakeSafe_Test is BaseTest {
         stop.stopRent(rentalOrder);
     }
 }
+```
+
+Result:
+```
+    │   ├─ [7970] STORE::removeRentals(0x234ffb294231b7028aeb4e9327eecd567e6aadce024adc984adfaa5ffeddc2ab, [RentalAssetUpdate({ rentalId: 0x5ae01b1080d6d1715c135a6b9d0f2a36b5150e579a40e3a5833e29f2a1e84ac7, amount: 1 })])
+    │   │   ├─ [7625] STORE_IMPLEMENTATION::removeRentals(0x234ffb294231b7028aeb4e9327eecd567e6aadce024adc984adfaa5ffeddc2ab, [RentalAssetUpdate({ rentalId: 0x5ae01b1080d6d1715c135a6b9d0f2a36b5150e579a40e3a5833e29f2a1e84ac7, amount: 1 })]) [delegatecall]
+    │   │   │   ├─ [2917] kernel::modulePermissions(0x53544f5245000000000000000000000000000000000000000000000000000000, StopPolicy: [0x21CA97969FCeD24DFb0aA660179aDcF5E0ff3da2], 0x3fd9b3ee00000000000000000000000000000000000000000000000000000000) [staticcall]
+    │   │   │   │   └─ ← true
+    │   │   │   └─ ← panic: arithmetic underflow or overflow (0x11)
+    │   │   └─ ← panic: arithmetic underflow or overflow (0x11)
+    │   └─ ← panic: arithmetic underflow or overflow (0x11)
+    └─ ← Error != expected error:  != panic: arithmetic underflow or overflow (0x11)
 ```
 
 # [L02]: Using solidity 8.20 and above may be incompatible with some chains
