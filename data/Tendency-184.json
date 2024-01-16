@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "Tendency",
+  "risk": "2",
+  "title": "Protocol isn't EIP712 Compliant",
+  "issueId": 184,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/184"
+}
