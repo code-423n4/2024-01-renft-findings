@@ -1,24 +1,3 @@
-## [NC-1] `Signer`: Some EIP-712 Type Hashes Don't Follow the Standard
-
-EIP-712 specifies that 
-
-> If the struct type references other struct types (and these in turn reference even more struct types), then the set of referenced struct types is collected, sorted by name and appended to the encoding. An example encoding is `Transaction(Person from,Person to,Asset tx)Asset(address token,uint256 amount)Person(address wallet,string name)`. [link](https://eips.ethereum.org/EIPS/eip-712#definition-of-encodetype)
-
-There are a few type hashes don't include all of the referenced struct type strings or don't have them in the right order.
-
-Here is a list of type strings that don't follow the standard:
-- `rentPayloadTypeHash` - missing Hook, structs not ordered alphabetically
-- `orderMetadataTypeHash` - missing Hook
-
-### Recommendation
-
-Append the struct type strings to the type strings.
-
-### Link To Affected Code
-
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/packages/Signer.sol#L394-L400
-https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/packages/Signer.sol#L406
-
 ## [INFO-1] `Kernel`: Inconsistent Use of `@` for Import Paths
 
 Some import paths for have `@` prefix while some does not for the same paths. It seems like other files all import with the `@` prefix, only the `Kernel.sol` file is missing the `@`.
