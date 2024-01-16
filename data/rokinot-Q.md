@@ -300,3 +300,9 @@ Certain tokens like USDC and USDT have a blacklist function which prevents these
 A handful of key changes were done compared to the v1.4.1 version which may hinder usage of rental safes. 
 
 For more information, visit https://github.com/safe-global/safe-contracts/blob/main/CHANGELOG.md
+
+### Fees work in unfavorable ways for users
+
+Fees are charged at order stop instead of order creation, meaning that users are at the whims of the administrator regarding how much in fees they're gonna be charged. Its possible that either renter and/or lender would be dissatisfied with a fee increment outside of their consent.
+
+One way to fix this would be by increasing the internal deposit accounting of the payment escrow by total deposited - fee at the order creation, this way the fee is charged at the beginning of the rental instead. 
