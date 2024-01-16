@@ -191,7 +191,7 @@ Result:
 
 # [L02]: Using solidity 8.20 and above may be incompatible with some chains
 
-The project uses solidity 8.20 and above to compile their contracts. solidity 8.0 by default uses Shanghai EVM to compile the contracts which may include `PUSH0` opcode. The project looks to expand to all the chains that are supported by Safe. However, it may be incompatible with some chains supported by Safe such as Arbitrum, due to the `PUSH0` opcode not being supported if the default EVM version is used.
+The project uses solidity 8.20 and above to compile their contracts. solidity 8.20 by default uses Shanghai EVM to compile the contracts which may include `PUSH0` opcode. The project looks to expand to all the chains that are supported by Safe. However, it may be incompatible with some chains supported by Safe such as Arbitrum, due to the `PUSH0` opcode not being supported if the default Shanghai EVM version is used.
 
 Reference: [https://docs.arbitrum.io/for-devs/concepts/differences-between-arbitrum-ethereum/solidity-support#:~:text=address%20aliasing.-,OPCODE%20PUSH0,-This%20OPCODE%20is](https://docs.arbitrum.io/for-devs/concepts/differences-between-arbitrum-ethereum/solidity-support#:~:text=address%20aliasing.-,OPCODE%20PUSH0,-This%20OPCODE%20is)
 
