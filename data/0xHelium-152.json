@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xHelium",
+  "risk": "3",
+  "title": "Malicious lender can DoS a rental settlement in case they use a consideration order with ER20 considerations tokens that have a blocklist",
+  "issueId": 152,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/152"
+}
