@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xDING99YA",
+  "risk": "3",
+  "title": "Due to the \"tipping\" feature in Seaport, attacker can send malicious ERC20 token as consideration item and make the NFT get stuck in Safe Wallet when rental expires",
+  "issueId": 139,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/139"
+}
