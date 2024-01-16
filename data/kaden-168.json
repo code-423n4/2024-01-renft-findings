@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "kaden",
+  "risk": "3",
+  "title": "Inconsistency of items used in `_addHooks` and `_removeHooks` results in incorrect item index being used with hooks, causing DoS",
+  "issueId": 168,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/168"
+}
