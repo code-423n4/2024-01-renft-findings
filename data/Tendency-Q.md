@@ -5,7 +5,7 @@ This could lead to compatibility issues and some other possible issues.
 
 As discussed with a sponsor, this isn't an intended behaviour.
 
-I have written a POC to show this can be changed.
+I have added a coded POC to show how this can be changed.
 
 Add the below test to `/test/integration/StopRent.t.sol`, then import:
  ```
