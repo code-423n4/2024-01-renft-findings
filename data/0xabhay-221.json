@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xabhay",
+  "risk": "3",
+  "title": "Policy Activation Failure Due to ```` Kernel.sol::requestPermissions()` Access Restriction",
+  "issueId": 221,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/221"
+}
