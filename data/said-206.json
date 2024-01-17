@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "said",
+  "risk": "3",
+  "title": "Lender assets can become stuck in the borrower's safe if the borrower is blacklisted from the used ERC20",
+  "issueId": 206,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/206"
+}
