@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "said",
+  "risk": "2",
+  "title": "If hooks are not configured for stop, or hooks are removed, rents that depend on them may not be stopped",
+  "issueId": 224,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/224"
+}
