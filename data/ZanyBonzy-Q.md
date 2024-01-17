@@ -119,3 +119,46 @@ Safe can only be added not removed. This is not good practice as vulnerable rent
 
 ### Recommended Mitigation Steps
 Implement a removeSafe function.
+
+# 8. No support for cryptopunks and other non standard ERC721 tokens.
+Links to affected code *
+https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Create.sol#L213C1-L224C14
+https://www.seaport.market/ethereum/asset/0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb:5766?tab=info
+https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Guard.sol#L195C3-L294C1
+
+## Impact
+The protocol intends to support all 721/1155 tokens to interact with as stated in the readMe. But the current contract implementations do not allow for the use of Cryptopunks and non-standard ERC721 tokens which are still widely used but do not support the `ERC721` interface.
+[On seaport, cryptopunks standard is denoted as CryptoPunks](https://www.seaport.market/ethereum/asset/0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb:2586?tab=info) and not ERC721
+> Token Standard CryptoPunks
+
+This means that rentals will not be conducted due to the check for token types in orders
+```
+            // Handle the ERC721 item.
+            if (offer.isERC721()) {
+                itemType = ItemType.ERC721;
+            }
+            // Handle the ERC1155 item.
+            else if (offer.isERC1155()) {
+                itemType = ItemType.ERC1155;
+            }
+            // ERC20s are not supported as offer items in a BASE order.
+            else { //@note offer.cryptopunks
+                revert Errors.CreatePolicy_SeaportItemTypeNotSupported(offer.itemType);
+            }
+```
+Also, the guard contract implements certain checks to monitor the removal of NFTs from the rental safe. Cryptopunks do not possess these functions which causes that if they're able to bypass the offer type checks above, transferring them out of the rental safe will be impossible leaving them stuck in the contracts.
+
+```
+   shared_set_approval_for_all_selector,
+    e721_approve_selector,
+    e721_safe_transfer_from_1_selector,
+    e721_safe_transfer_from_2_selector,
+    e721_transfer_from_selector,
+    e721_approve_token_id_offset,
+    e721_safe_transfer_from_1_token_id_offset,
+    e721_safe_transfer_from_2_token_id_offset,
+    e721_transfer_from_token_id_offset,
+```
+
+## Recommended Mitigation Steps
+Introduce functions to support cryptopunks or update the documentation
