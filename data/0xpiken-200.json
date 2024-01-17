@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xpiken",
+  "risk": "3",
+  "title": "An ERC1155 token `renter` may repay their own order with rental assets belonging to other renters.",
+  "issueId": 200,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/200"
+}
