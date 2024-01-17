@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "BARW",
+  "risk": "2",
+  "title": "Lenders who stop a PAY Rental before the rental time has passed will pay fees to the protocol for the whole rental time, not only for the actual rental time",
+  "issueId": 225,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/225"
+}
