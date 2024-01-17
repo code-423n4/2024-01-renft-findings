@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "42TechLabs",
+  "risk": "2",
+  "title": "Direct Change of Kernel Poses Potential Risks in changeKernel Function",
+  "issueId": 198,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/198"
+}
