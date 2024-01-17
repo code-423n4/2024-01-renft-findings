@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "Coverage",
+  "risk": "2",
+  "title": "Deactivating an unregistered policy can lead to the wrong policy being deleted",
+  "issueId": 232,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/232"
+}
