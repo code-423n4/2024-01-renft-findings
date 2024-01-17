@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "zaevlad",
+  "risk": "2",
+  "title": "Wrong domainSeparator and eip712DomainTypehash definition",
+  "issueId": 204,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/204"
+}
