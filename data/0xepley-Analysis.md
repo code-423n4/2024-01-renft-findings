@@ -139,5 +139,46 @@ Sequence diagrams are a good way to understand the overall interaction of the cl
 
 
 
+## d) Test analysis
+### What did the project do differently? ;
+-   1) It can be said that the developers of the project did a quality job, there is a test structure consisting of tests with quality content. In particular, tests have been written successfully.
+
+-   2) Overall line coverage percentage provided by your tests : 80
+
+### What could they have done better?
+
+-  1) In order to understand the test scenarios and develop more effective test scenarios, the following bob, alice and other roles are can be defined one by one, in this way role definitions increase the quality and readability in tests
+
+```solidity
+
+ // Sample labels
+vm.label(bob, 'bob');
+vm.label(alice, 'alice');
+vm.label(DEPLOYER, 'deployer');
+vm.label(USD_OWNER, 'usd owner');
+vm.label(POOL_PROXY, 'lending pool');
+```
+
+
+-  2) If we look at the test scope and content of the project with a systematic checklist, we can see which parts are good and which areas have room for improvement As a result of my analysis, those marked in green are the ones that the project has fully achieved. The remaining areas are the development areas of the project in terms of testing ;
+
+
+[![test-cases.jpg](https://i.postimg.cc/1zgD5wCt/test-cases.jpg)](https://postimg.cc/v1s40gdF)
+
+Ref:https://xin-xia.github.io/publication/icse194.pdf
+
+[![nabeel.jpg](https://i.postimg.cc/x1bHPVz4/nabeel.jpg)](https://postimg.cc/ZW4CTgj8)
+
+- 3) Test Coverage of the protocol is around 80% which is very less, the recommended test coverage of any protocol is above 90% so it is recommended to increase the coverage to at least 90%
+
+# Test-case analysis of Contracts
+
+### General Information
+- **Solc Version:** 0.8.7
+- **Optimizer Enabled:** false
+- **Runs:** 200
+- **Block Limit:** 30,000,000 gas
+
+
 ### Time spent:
 5 hours
