@@ -8,6 +8,7 @@
 | 6 | Renter Can Still Transfer Out if the NFT Uses ERC1155A Standard |
 | 7 | Loss of Rebase Token in Payment Escrow |
 | 8 | Low Level Function Call Does Not Check Token Existence When Settle the Payment |
+| 9| No one can stop and settle the rental if the lender address does not implement onERC721Received or onERC1155Received | 
 
 # Renter can lock or steal lender's nft if the nft used is moonbird
 
@@ -208,6 +209,38 @@ https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9
 but if the token is self-destructed and no longer exists, no token transfer is done but the payment is still settled
 
 it is recommend to use openzeppelin safeTransfer, it has built-in contract existence check by default
+
+# No one can stop and settle the rental if the lender address does not implement onERC721Received or onERC1155Received
+
+when the rental is settled, someone needs to call stop rental, this involves transferring nft back to the lender
+
+```solidity
+    function _transferERC721(Item memory item, address recipient) private {
+        IERC721(item.token).safeTransferFrom(address(this), recipient, item.identifier);
+    }
+
+    /**
+     * @dev Helper function to transfer an ERC1155 token.
+     *
+     * @param item      Item which will be transferred.
+     * @param recipient Address which will receive the token.
+     */
+    function _transferERC1155(Item memory item, address recipient) private {
+        IERC1155(item.token).safeTransferFrom(
+            address(this),
+            recipient,
+            item.identifier,
+            item.amount,
+            ""
+        );
+    }
+```
+
+the method used is safeTransferFrom
+
+this requires a recipient implement onERC721Received or onERC1155Received method
+
+so when the recipient (lender) does not implement this method, the rental failed to settle and nft is locked in the safe wallet and payment is locked in the payment escrow
 
 
 
