@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "said",
+  "risk": "3",
+  "title": "Attacker can lock lender NFTs and ERC20 in the safe if the offer is set to partial",
+  "issueId": 203,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/203"
+}
