@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "Topmark",
+  "risk": "3",
+  "title": "Signer Contract is exposed to ECDSA Nonce Reuse Attack",
+  "issueId": 196,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/196"
+}
