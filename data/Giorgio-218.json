@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "Giorgio",
+  "risk": "2",
+  "title": "Missing embedded Hook Struct in the 712 hash",
+  "issueId": 218,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/218"
+}
