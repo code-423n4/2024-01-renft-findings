@@ -84,6 +84,8 @@ Uses Consensys Solidity Metrics
 
 **Policies contracts:** On average there are **1.35** code lines per comment (lower=better).
 
+# Call Graph of Important Contracts
+
 ## Call graph of Kernel.sol
 
 [![Screenshot-from-2024-01-17-21-47-36.png](https://i.postimg.cc/5NFrPQrw/Screenshot-from-2024-01-17-21-47-36.png)](https://postimg.cc/1fsMXXst)
@@ -132,7 +134,10 @@ Sequence diagrams are a good way to understand the overall interaction of the cl
 ## `_settlePayment()`
 [![Screenshot-from-2024-01-17-23-13-40.png](https://i.postimg.cc/kDr1k8X6/Screenshot-from-2024-01-17-23-13-40.png)](https://postimg.cc/q6LxKNK4)
 
-## 
+## `stopRent()`
+[![Screenshot-from-2024-01-17-23-20-39.png](https://i.postimg.cc/vBKx8tnB/Screenshot-from-2024-01-17-23-20-39.png)](https://postimg.cc/phDLq8qb)
+
+
 
 ### Time spent:
 5 hours
