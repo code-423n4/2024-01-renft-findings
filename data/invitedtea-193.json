@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "invitedtea",
+  "risk": "2",
+  "title": "Unsafe Delegate Call in `initializeRentalSafe`",
+  "issueId": 193,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/193"
+}
