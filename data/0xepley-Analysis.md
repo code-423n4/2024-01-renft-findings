@@ -52,5 +52,63 @@ Accordingly, I would analyze and audit the subject in the following steps;
 |8|Infographic|[Figma](https://www.figma.com/)|Tried to make Visual drawings to understand the hard-to-understand mechanisms|
 |9|Special focus on Areas of  Concern|[Areas of Concern](https://github.com/code-423n4/2024-01-renft?tab=readme-ov-file#attack-ideas-where-to-look-for-bugs)|Code where I should focus more|
 
+## c) Analysis of the code base
+
+The most important summary in analyzing the code base is the stacking of codes to be analyzed.
+In this way, many predictions can be made, including the difficulty levels of the contracts, which one is more important for the auditor, the features they contain that are important for security (payable functions, uses assembly, etc.), the audit cost of the project, and the time to be allocated to the audit;
+Uses Consensys Solidity Metrics
+
+-  **Language:** language in which of the source is written
+-  **nSLOC:** normalized source lines of code (only source-code lines; no comments, no blank lines)
+-  **Comment Lines:** lines containing single or block comments
+-  **Blank Lines:** Blank Lines in the source file
+-  **Total Lines:** Total number of lines in the file 
+
+## Analysis of sloc of modules contracts
+
+[![Screenshot-from-2024-01-17-21-20-47.png](https://i.postimg.cc/Kcd5rL7D/Screenshot-from-2024-01-17-21-20-47.png)](https://postimg.cc/V5WMzJVJ)
+
+## Analysis of sloc of Pakages contracts
+
+[![Screenshot-from-2024-01-17-21-37-29.png](https://i.postimg.cc/jqPBs7sZ/Screenshot-from-2024-01-17-21-37-29.png)](https://postimg.cc/RqCgdqJH)
+
+## Analysis of sloc of Policies contracts
+
+[![Screenshot-from-2024-01-17-21-38-15.png](https://i.postimg.cc/Y0CFyF8M/Screenshot-from-2024-01-17-21-38-15.png)](https://postimg.cc/HcFjrVfh)
+
+## Comment-to-Source Ratio:
+
+**Module contracts:** On average there are **0.8** code lines per comment (lower=better).
+
+**Packages contracts:** On average there are **1.27** code lines per comment (lower=better).
+
+**Policies contracts:** On average there are **1.35** code lines per comment (lower=better).
+
+## Call graph of Kernel.sol
+
+[![Screenshot-from-2024-01-17-21-47-36.png](https://i.postimg.cc/5NFrPQrw/Screenshot-from-2024-01-17-21-47-36.png)](https://postimg.cc/1fsMXXst)
+
+## Call graph of Stop.sol
+
+[![Screenshot-from-2024-01-17-21-50-10.png](https://i.postimg.cc/MT7LWCyd/Screenshot-from-2024-01-17-21-50-10.png)](https://postimg.cc/5YtggkKC)
+
+## Call graph of Guard.sol
+
+[![Screenshot-from-2024-01-17-21-51-25.png](https://i.postimg.cc/bdcdQ2Gz/Screenshot-from-2024-01-17-21-51-25.png)](https://postimg.cc/Fkp9vzgq)
+
+## Call graph of Create.sol
+
+[![Screenshot-from-2024-01-17-21-52-52.png](https://i.postimg.cc/CKmNmwsy/Screenshot-from-2024-01-17-21-52-52.png)](https://postimg.cc/xkNMdDZg)
+
+## UML diagram of PaymentEscrow.sol
+
+[![Screenshot-from-2024-01-17-21-59-54.png](https://i.postimg.cc/c1bFp7tv/Screenshot-from-2024-01-17-21-59-54.png)](https://postimg.cc/5j85vC3J)
+
+
+## UML diagram of Create.sol
+
+[![Screenshot-from-2024-01-17-22-02-07.png](https://i.postimg.cc/66PNMv90/Screenshot-from-2024-01-17-22-02-07.png)](https://postimg.cc/QVcPtVK9)
+
+
 ### Time spent:
 5 hours
