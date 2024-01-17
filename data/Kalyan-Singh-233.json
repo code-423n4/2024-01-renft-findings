@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "Kalyan-Singh",
+  "risk": "3",
+  "title": "One signature from the CREATE_SIGNER can be re-used for multiple orders leading to malicious behaviour",
+  "issueId": 233,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/233"
+}
