@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "CipherSleuths",
+  "risk": "2",
+  "title": "Admin policy contract unintentionally can be used to withdraw all funds in escrow module using skim",
+  "issueId": 228,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/228"
+}
