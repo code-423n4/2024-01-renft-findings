@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "fnanni",
+  "risk": "2",
+  "title": "Extensions that are whitelisted and then removed cannot be disabled",
+  "issueId": 238,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/238"
+}
