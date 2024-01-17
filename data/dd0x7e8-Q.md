@@ -47,3 +47,50 @@ function deploy(
 
 Removing the `payable` modifier ensures that no Ether can be sent to the `deploy()` function. If Ether is sent to a non-payable function, the transaction will be rejected, and the Ether will remain with the sender. This helps prevent the accidental loss of funds and ensures that the contract behavior is clear and explicit.
 
+## Inconsistency in Event Emission for `Stop` Contract
+
+The `Stop` contract defines two functions, `stopRent` and `stopRentBatch`, for stopping rental orders individually or in batches. However, there's a discrepancy in how the `Events.RentalOrderStopped` event is emitted in these two functions regarding the order hash data emitted.
+
+* Single Order Stop Function (`stopRent`):
+
+When stopping a single rental order, the `stopRent` function emits the `RentalOrderStopped` event using the `seaportOrderHash` directly from the `order` parameter:
+
+https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Stop.sol#L305
+
+```solidity
+function stopRent(RentalOrder calldata order) external {
+    // ... (omitted for brevity)
+    _emitRentalOrderStopped(order.seaportOrderHash, msg.sender);
+}
+```
+
+* Batch Order Stop Function (`stopRentBatch`):
+
+In contrast, when stopping a batch of rental orders, the `stopRentBatch` function emits the `RentalOrderStopped` event using a hash derived from the order data, `_deriveRentalOrderHash(orders[i])`, for each order in the batch:
+
+https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Stop.sol#L356C37-L356C48
+
+```solidity
+function stopRentBatch(RentalOrder[] calldata orders) external {
+    // ... (omitted for brevity)
+    for (uint256 i = 0; i < orders.length; ++i) {
+        // ... (omitted for brevity)
+        orderHashes[i] = _deriveRentalOrderHash(orders[i]);
+        // ... (omitted for brevity)
+        _emitRentalOrderStopped(orderHashes[i], msg.sender);
+    }
+}
+```
+
+The inconsistency lies in the source of the order hash used in the event emission:
+
+- In `stopRent`, the `seaportOrderHash` is used, which suggests that it is the original hash of the order as it was created or recognized by the system.
+- In `stopRentBatch`, `_deriveRentalOrderHash(orders[i])` computes a new hash for each order based on its contents, rather than using an existing `seaportOrderHash`.
+
+This discrepancy could lead to potential confusion or inconsistencies in tracking and handling events off-chain. If an external system or service relies on these events for processing or analytics, the difference in emitted values might cause issues such as:
+
+- Difficulty in correlating events from single and batch operations as pertaining to the same underlying rental order.
+- Data integrity concerns if the computed hash does not match the original order hash in all cases.
+- Inconsistencies in event logs, making it challenging to create a reliable history or audit trail of rental order stops.
+
+The contract should standardize the data emitted in events to ensure consistency. If `seaportOrderHash` is the canonical identifier for orders, it should be used in both single and batch operations.
