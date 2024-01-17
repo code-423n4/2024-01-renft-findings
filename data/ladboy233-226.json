@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "ladboy233",
+  "risk": "2",
+  "title": "ERC721 nft Approval selector and transfer from selector overlap with erc20 token approval selector and transfer from selector and the checkin guard incorrectly applies to erc20 token action, blocking erc20 token transfer",
+  "issueId": 226,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/226"
+}
