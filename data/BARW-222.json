@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "BARW",
+  "risk": "3",
+  "title": "Changing the fees in `PaymentEscrow` influences the amount of fees that are paid for already active rentals",
+  "issueId": 222,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/222"
+}
