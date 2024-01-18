@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "juancito",
+  "risk": "3",
+  "title": "Missing `rentalWallet` in signature leads to bricked ERC1155 rentals and stuck assets",
+  "issueId": 385,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/385"
+}
