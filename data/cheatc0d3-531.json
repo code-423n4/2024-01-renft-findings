@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "cheatc0d3",
+  "risk": "2",
+  "title": "Denial of Service in stopRent function",
+  "issueId": 531,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/531"
+}
