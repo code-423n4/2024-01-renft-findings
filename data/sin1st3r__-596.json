@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "sin1st3r__",
+  "risk": "3",
+  "title": "Mishandling of double-entry tokens in `skim()` function in `PaymentEscrow` causes permanent freezal of rentals and/or hijacking of all double-entry tokens in the `PaymentEscrow` by an attacker",
+  "issueId": 596,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/596"
+}
