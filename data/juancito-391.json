@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "juancito",
+  "risk": "2",
+  "title": "The same hook can be added multiple times to the same item to exploit hooks logic",
+  "issueId": 391,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/391"
+}
