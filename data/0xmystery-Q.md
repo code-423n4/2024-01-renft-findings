@@ -129,6 +129,24 @@ https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9
 -     * @dev Safe transfer for ERC20 tokens that do not consistently renturn true/false.
 +     * @dev Safe transfer for ERC20 tokens that do not consistently return true/false.
 ```
+https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/modules/Storage.sol#L131
+
+```diff
+-     * @notice Fetches the hook address that is pointing at the the target.
++     * @notice Fetches the hook address that is pointing to the the target.
+```
+https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/packages/Reclaimer.sol#L78
+
+```diff
+-        // initates the reclaim. In the context of a delegate call, address(this)
++        // initiates the reclaim. In the context of a delegate call, address(this)
+```
+https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Stop.sol#L32
+
+```diff
+- * @notice Acts as an interface for all behavior related to stoping a rental.
++ * @notice Acts as an interface for all behavior related to stopping a rental.
+```
 ## Private function with embedded modifier reduces contract size
 Consider having the logic of a modifier embedded through a private function to reduce contract size if need be. A `private` visibility that is more efficient on function calls than the `internal` visibility is adopted because the modifier will only be making this call inside the contract.
 
