@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "`GUARD_ADMIN` role is unable to toggle which addresses are safe for a rental wallet to delegate call, which violates specs",
+  "issueId": 438,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/438"
+}
