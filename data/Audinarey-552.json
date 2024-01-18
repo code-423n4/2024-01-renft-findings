@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "Audinarey",
+  "risk": "3",
+  "title": "Malicious Lender can create a PAY order that does not settle to the renter",
+  "issueId": 552,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/552"
+}
