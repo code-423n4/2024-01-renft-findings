@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "CipherSleuths",
+  "risk": "2",
+  "title": "_emitRentalOrderStopped emits wrong seaport order hashes for stopping multiple rentals",
+  "issueId": 562,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/562"
+}
