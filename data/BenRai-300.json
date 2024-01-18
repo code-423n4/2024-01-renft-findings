@@ -1,8 +1,0 @@
-{
-  "contest": 317,
-  "handle": "BenRai",
-  "risk": "2",
-  "title": "When the StopPolicy is ever deactivated all NFTs in older gnosis safes will be stuck",
-  "issueId": 300,
-  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/300"
-}
