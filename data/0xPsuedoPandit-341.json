@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xPsuedoPandit",
+  "risk": "2",
+  "title": "Protocol is not `EIP712` compliant: incorrect typehash for `OrderMetadata` and `Item` structures.",
+  "issueId": 341,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/341"
+}
