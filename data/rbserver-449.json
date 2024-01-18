@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "Order with multiple ERC721/ERC1155 tokens cannot be stopped when lender is unable to receive one of these tokens even though such lender is able to receive all other tokens",
+  "issueId": 449,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/449"
+}
