@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "Calling `Stop.stopRentBatch` function erroneously emits `RentalOrderStopped` event with corresponding rental order's order hash instead of its `seaportOrderHash`",
+  "issueId": 436,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/436"
+}
