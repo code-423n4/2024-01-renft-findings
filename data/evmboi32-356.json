@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "evmboi32",
+  "risk": "2",
+  "title": "If the recipient of the ERC20 payment is blacklisted an order cannot be stopped.",
+  "issueId": 356,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/356"
+}
