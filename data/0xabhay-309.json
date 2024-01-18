@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xabhay",
+  "risk": "2",
+  "title": "Unchecked Array Growth in ` Accumulator.sol `: Potential for Denial of Service Attack",
+  "issueId": 309,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/309"
+}
