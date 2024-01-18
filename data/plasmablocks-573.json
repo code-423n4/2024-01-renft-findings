@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "plasmablocks",
+  "risk": "2",
+  "title": "`Kernel` does not implement a 2 step process for updating the executor and admin addresses",
+  "issueId": 573,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/573"
+}
