@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "DeFiHackLabs",
+  "risk": "2",
+  "title": "The lender of the payee order may loss their ERC20.",
+  "issueId": 433,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/433"
+}
