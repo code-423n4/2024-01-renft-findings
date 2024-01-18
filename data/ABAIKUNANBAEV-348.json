@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "ABAIKUNANBAEV",
+  "risk": "2",
+  "title": "The protocol incorrectly checks for execution if the ReceivedItem is ERC20 token",
+  "issueId": 348,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/348"
+}
