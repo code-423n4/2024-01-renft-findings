@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "SpicyMeatball",
+  "risk": "2",
+  "title": "Attacker can temporarily DOS safe creation for other users",
+  "issueId": 591,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/591"
+}
