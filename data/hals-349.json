@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "hals",
+  "risk": "3",
+  "title": "Malfunctioned/too many `hookOnStop` hooks will lock the rented assets in the SAFE wallet",
+  "issueId": 349,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/349"
+}
