@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "evmboi32",
+  "risk": "3",
+  "title": "The `burn` selector is missing inside the _checkTransaction",
+  "issueId": 337,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/337"
+}
