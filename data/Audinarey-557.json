@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "Audinarey",
+  "risk": "2",
+  "title": "reNFT Protocol is not EIP712 compliant (See coded POC)",
+  "issueId": 557,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/557"
+}
