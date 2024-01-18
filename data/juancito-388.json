@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "juancito",
+  "risk": "2",
+  "title": "Lenders can prevent rents from being stopped via `safeTransferFrom` callback",
+  "issueId": 388,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/388"
+}
