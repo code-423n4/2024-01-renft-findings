@@ -26,3 +26,7 @@ My recommendation is to round in your favour:
   +      return ((amount * fee) + 5000) / 10000);
     }
 ```
+
+# [LOW-3] A risk of transferring locked NFTs if the `Stop Policy` is enabled as a whitelisted delegate address
+
+The [Stop Policy](https://github.com/re-nft/smart-contracts/blob/main/src/policies/Stop.sol) will be enable as a Safe Module, then safes will delegate call to the policy which inherits from [Reclaimer.sol](https://github.com/re-nft/smart-contracts/blob/main/src/packages/Reclaimer.sol) and that policy will call [`reclaimRentalOrder`](https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/packages/Reclaimer.sol#L71-L101). If the stop policy becomes an enabled delegate address, everyone will be able to call `reclaimRentalOrder` and move the locked NFTs.
