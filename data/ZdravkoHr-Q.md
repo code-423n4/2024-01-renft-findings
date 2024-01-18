@@ -1,0 +1,2 @@
+# [NC] `PUSH0` is not supported on some chains
+The protocol will be deployed on all chains that are supported by Safe. This includes chains like Polygon where the `PUSH0` opcode is not supported. The current pragma of the contracts `^0.8.20` allows compiling with 0.8.20 which uses PUSH0. If the contracts are compiled with this compiler, they will not work on these chains after deployment.
