@@ -67,3 +67,18 @@ To completely adhere to the  [EIP 712 standard](https://eips.ethereum.org/EIPS/e
 manual review
 ## Recommended Mitigation Steps
 use `abi.encodePacked` instead of `abi.encode` when comoputing `rentalOrderTypeHash`
+
+# L-06 Remove extra hook validation check in guard policy
+
+## Lines of code
+
+https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Guard.sol#L338
+
+## Impact
+`STORE.hookOnTransaction` returns whether a hook is valid or not but there is an extra check(`hook != address(0)`) to determine hook validity when a tx is triggered which is not necessary and costs extra gas
+
+
+## Tools Used
+manual review
+## Recommended Mitigation Steps
+update the if statement to`if (isActive)`
