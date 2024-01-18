@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "trachev",
+  "risk": "3",
+  "title": "When stopping a rental malicious user can steal tokens from another renter's rental safe",
+  "issueId": 583,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/583"
+}
