@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "Ward",
+  "risk": "2",
+  "title": "Missing struct elements in the hash calculation can lead to EIP-712 compliance issues",
+  "issueId": 482,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/482"
+}
