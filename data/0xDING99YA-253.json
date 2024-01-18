@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xDING99YA",
+  "risk": "3",
+  "title": "By resetting \"fallbackHandler\" in a Gnosis Safe wallet, attacker can easily bypass all checks in Guard.sol and steal any rental NFT",
+  "issueId": 253,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/253"
+}
