@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "juancito",
+  "risk": "2",
+  "title": "`PAY` orders should have a mandatory fee or whitelist hook to prevent an adversary from fulfilling all of them and take profit from pro rata payments",
+  "issueId": 393,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/393"
+}
