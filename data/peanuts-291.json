@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "peanuts",
+  "risk": "2",
+  "title": "Low decimal tokens may truncate to zero when accounting for payment in PaymentEscrow.sol",
+  "issueId": 291,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/291"
+}
