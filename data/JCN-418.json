@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "JCN",
+  "risk": "3",
+  "title": "Malicious actor can steal any actively rented NFT and freeze the rental payments (of the affected rentals) in the `escrow` contract",
+  "issueId": 418,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/418"
+}
