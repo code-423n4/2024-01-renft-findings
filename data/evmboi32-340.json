@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "evmboi32",
+  "risk": "2",
+  "title": "The `getCreate2Address` returns an incorrect address on the `zkSync Era chain`.",
+  "issueId": 340,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/340"
+}
