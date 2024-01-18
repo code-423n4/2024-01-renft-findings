@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "BARW",
+  "risk": "2",
+  "title": "Borrower Can  Refusal to Receive Payment With ERC777 `tokensReceived` Hook",
+  "issueId": 320,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/320"
+}
