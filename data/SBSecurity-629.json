@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "SBSecurity",
+  "risk": "3",
+  "title": "encodedData argument of OrderMetadata hashStruct is missing struct members which is not EIP712 compliant ",
+  "issueId": 629,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/629"
+}
