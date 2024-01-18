@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "sin1st3r__",
+  "risk": "3",
+  "title": "Guard doesn't check for `burn(address,uint256,uint256)` function selector in ERC1155 tokens allowing an attacker to burn ERC1155 tokens after renting and utilizing them for some time.",
+  "issueId": 584,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/584"
+}
