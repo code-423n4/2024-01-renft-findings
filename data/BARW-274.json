@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "BARW",
+  "risk": "2",
+  "title": "If a `onStop` hook fails for any reason that can not be fixed, the rented NFTs will be stuck in the safe of the borrower and the lender will never get paid",
+  "issueId": 274,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/274"
+}
