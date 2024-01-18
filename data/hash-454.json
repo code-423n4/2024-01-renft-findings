@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "hash",
+  "risk": "3",
+  "title": "Missing rentalWallet field in orderHash allows stealing from other rental wallets",
+  "issueId": 454,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/454"
+}
