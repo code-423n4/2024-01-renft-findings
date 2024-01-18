@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "jasonxiale",
+  "risk": "2",
+  "title": "`Signer._deriveRentalTypehashes`, `Signer._deriveOrderMetadataHash`, `Signer._deriveRentalOrderHash` don't follow EIP-712",
+  "issueId": 378,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/378"
+}
