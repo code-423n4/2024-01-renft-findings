@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "kinda_very_good",
+  "risk": "2",
+  "title": "There is no max fee threshold, the protocol devs could set the fee to the full 10000 ensuring no amount is sent to the user ",
+  "issueId": 592,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/592"
+}
