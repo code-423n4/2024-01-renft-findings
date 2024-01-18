@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "oakcobalt",
+  "risk": "2",
+  "title": "Kernel's Actions.UpgradeModule will immediately cause funds freeze and key function DOS",
+  "issueId": 434,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/434"
+}
