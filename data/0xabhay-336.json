@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xabhay",
+  "risk": "3",
+  "title": "Incorrect ItemType Handling for Dual Standard NFTs in ` Reclaimer.sol::reclaimRentalOrder `````````",
+  "issueId": 336,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/336"
+}
