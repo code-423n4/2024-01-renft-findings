@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "serial-coder",
+  "risk": "3",
+  "title": "Incorrect `gnosis_safe_disable_module_offset` constant leads to removing the rental safe's `module` without verification",
+  "issueId": 565,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/565"
+}
