@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "HSP",
+  "risk": "2",
+  "title": "ERC20 blacklist user can fulfill PAY order and make ERC721/ERC1155 items locked in the Safe",
+  "issueId": 258,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/258"
+}
