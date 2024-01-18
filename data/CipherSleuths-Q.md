@@ -81,4 +81,4 @@ https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9
 ## Tools Used
 manual review
 ## Recommended Mitigation Steps
-update the if statement to`if (isActive)`
+update the if statement to `if(isActive)`
