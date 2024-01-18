@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "KupiaSec",
+  "risk": "2",
+  "title": "Violation of `EIP-712` standard for `rentPayloadTypeHash` in `Signer._deriveRentalTypehashes` function",
+  "issueId": 265,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/265"
+}
