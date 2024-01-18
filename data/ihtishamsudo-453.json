@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "ihtishamsudo",
+  "risk": "3",
+  "title": "Incorrect ItemType Order in `reclaimRentalOrder` leads to potential asset transfer errors",
+  "issueId": 453,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/453"
+}
