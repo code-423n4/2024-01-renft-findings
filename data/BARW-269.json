@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "BARW",
+  "risk": "3",
+  "title": "When a `onStop` hook is removed from the whitelist during the rental time it will not be possible to stop a rental",
+  "issueId": 269,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/269"
+}
