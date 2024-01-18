@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "NentoR",
+  "risk": "2",
+  "title": "`PaymentEscrow::setFee()` is susceptible to frontrunning",
+  "issueId": 306,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/306"
+}
