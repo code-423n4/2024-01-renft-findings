@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0x886699",
+  "risk": "3",
+  "title": "For _safeTransfer function of  PaymentEscrow.sol , we should add lock to avoid Re-Entrancy risk",
+  "issueId": 298,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/298"
+}
