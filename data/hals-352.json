@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "hals",
+  "risk": "2",
+  "title": "Defining the `_DOMAIN_SEPARATOR` as an immutable will disable the protocol integration in a case of a hardfork",
+  "issueId": 352,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/352"
+}
