@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "bareli",
+  "risk": "2",
+  "title": "The return value of an external call is not stored in a local or state variable.",
+  "issueId": 566,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/566"
+}
