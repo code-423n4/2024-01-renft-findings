@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "hash",
+  "risk": "3",
+  "title": "Incorrect ordering for deletion allows to flash steal rented NFT's",
+  "issueId": 466,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/466"
+}
