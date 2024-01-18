@@ -47,3 +47,24 @@ If a reorg happens, the block.chainId will be changed. In [Signer.sol](https://g
         }
     }
 ```
+
+# [LOW-5] Users will not be able to deactivate their safe extensions if they have been removed from the whitelist
+
+In case where the protocol decides to remove a given extension from the whitelist, safe users will not be able to remove that extension because it checks if it is whitelisted and reverts otherwise
+
+```solidity
+else if (selector == gnosis_safe_disable_module_selector) {
+            // Load the extension address from calldata.
+            address extension = address(
+                uint160(
+                    uint256(
+                        _loadValueFromCalldata(data, gnosis_safe_disable_module_offset)
+                    )
+                )
+            );
+
+            // Check if the extension is whitelisted. 
+            // @audit will revert if not whitelisted anymore
+            _revertNonWhitelistedExtension(extension);
+        }
+```
