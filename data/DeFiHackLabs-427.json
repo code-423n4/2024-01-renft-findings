@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "DeFiHackLabs",
+  "risk": "3",
+  "title": "attacker can match base, pay and payee order at the same time, as a result, escrow's accounting will be wrong and it can be drained",
+  "issueId": 427,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/427"
+}
