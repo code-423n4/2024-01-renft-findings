@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "zzzitron",
+  "risk": "2",
+  "title": "`Signer:_deriveOrderMetadataHash`: malformed orders can be fulfilled due to incorrect hashing",
+  "issueId": 465,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/465"
+}
