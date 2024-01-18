@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "hash",
+  "risk": "2",
+  "title": "Hardcoded CHAIN_ID for EIP712",
+  "issueId": 467,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/467"
+}
