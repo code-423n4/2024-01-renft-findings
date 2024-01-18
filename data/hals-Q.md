@@ -5,6 +5,7 @@
 | [L-01](#l-01) | Lack of minimum signers & minimum threshold check                    | Low      |
 | [L-02](#l-02) | `Create.validateOrder` function : `zoneParams` can be replayed       | Low      |
 | [L-03](#l-03) | `Create.validateOrder` function : renter `signature` can be replayed | Low      |
+| [L-04](#l-04) | `PaymentEscrow` can be bricked by some payment tokens                                                                                         | Low      |
 
 # Low
 
@@ -96,3 +97,51 @@ Manual Testing.
 ## Recommendation
 
 Save the recovered signature in a mapping, and check against it whenever `validateOrder` is invoked.
+## [L-04] `PaymentEscrow` can be bricked by some payment tokens<a id="l-04" ></a>
+
+## Impact
+
+- Some tokens as [`cUSDCv3`](https://etherscan.io/address/0xbfc4feec175996c08c8f3a0469793a7979526065#code) (Compound USDC) has a special case when the user determines the amount to be transferred to be equals to `type(uint256).max` while his balance is less than this amount; in this case his balance will be transferred instead of reverting the transaction:
+
+  ```javascript
+  if (amount == type(uint256).max) {
+    amount = balanceOf(src);
+  }
+  ```
+
+- How could this brick the `PaymentEscrow` with `cUSDCv3` token as the payment token and resulting in locking the rented assets?
+
+  1.  Assume that there's a `BASE` rental order with `cUSDCv3` token as it's payment token.
+  2.  A malicious renter has a dust amount of this token (1 wei for example), then he fulfills this rental order by paying the protocol `type(uint256).max`, so the escrow will record this max amount as being deposited in it.
+  3.  Now the rental time is over, but if anyone tries to stop the rental by calling `Stop.stopRentals`; the transaction will revert as the balance of the escrow is way less than it has actually received (the escrow contract received the dust amount instead of receiving the `type(uint256).max`, and the recorded ` balanceOf[token]` is set to `type(uint256).max`).
+
+- This will result in permanently locking the rented assets in the renter SAFE wallet.
+
+## Proof of Concept
+
+[Create.\_rentFromZone function/L599-L603](https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Create.sol#L599-L603)
+
+```javascript
+    for (uint256 i = 0; i < items.length; ++i) {
+                if (items[i].isERC20()) {
+                    ESCRW.increaseDeposit(items[i].token, items[i].amount);
+                }
+            }
+```
+
+[PaymentEscrow.\_increaseDeposit function](https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/modules/PaymentEscrow.sol#L304-L307)
+
+```javascript
+    function _increaseDeposit(address token, uint256 amount) internal {
+        // Directly increase the synced balance.
+        balanceOf[token] += amount;
+    }
+```
+
+## Tools Used
+
+Manual Review.
+
+## Recommended Mitigation Steps
+
+Prevent using such tokens in the protocol.
