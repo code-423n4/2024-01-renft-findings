@@ -30,3 +30,6 @@ My recommendation is to round in your favour:
 # [LOW-3] A risk of transferring locked NFTs if the `Stop Policy` is enabled as a whitelisted delegate address
 
 The [Stop Policy](https://github.com/re-nft/smart-contracts/blob/main/src/policies/Stop.sol) will be enable as a Safe Module, then safes will delegate call to the policy which inherits from [Reclaimer.sol](https://github.com/re-nft/smart-contracts/blob/main/src/packages/Reclaimer.sol) and that policy will call [`reclaimRentalOrder`](https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/packages/Reclaimer.sol#L71-L101). If the stop policy becomes an enabled delegate address, everyone will be able to call `reclaimRentalOrder` and move the locked NFTs.
+
+# [LOW-4] The contracts may stop working if a reorg happens
+If a reorg happens, the block.chainId will be changed. In [Signer.sol](https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/packages/Signer.sol#L64) the `CHAIN_ID` is set in the constructor and cannot be changed afterwards. In the case of reorg, there will be an incongruity between block.chainId and _CHAIN_ID and the whole Signer will not work. I recommend making _CHAIN_ID a storage variable (currently immutable) and adding a function that updates it to block.chainid
