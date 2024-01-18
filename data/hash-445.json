@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "hash",
+  "risk": "2",
+  "title": "RentalWallet creation can be DOS'd due to direct wallet creation via SafeFactory",
+  "issueId": 445,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/445"
+}
