@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "cheatc0d3",
+  "risk": "3",
+  "title": "Users funds can be locked in escrow module due to possibility of feeNumerator being set too high ",
+  "issueId": 506,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/506"
+}
