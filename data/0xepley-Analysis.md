@@ -9,9 +9,10 @@
 |c) |Analysis of the code base | What is unique? How are the existing patterns used? "Solidity-metrics" was used  |
 |d) |Test analysis | Test scope of the project and quality of tests |
 |e) |Security Approach of the Project | Audit approach of the Project |
-|f) |Other Audit Reports and Automated Findings | What are the previous Audit reports and their analysis |
-|g) |Packages and Dependencies Analysis | Details about the project Packages |
-|h) |New insights and learning of project from this audit | Things learned from the project |
+|f) |Codebase Quality | Overall Code Quality of the Project |
+|g) |Other Audit Reports and Automated Findings | What are the previous Audit reports and their analysis |
+|h) |Packages and Dependencies Analysis | Details about the project Packages |
+|i) |New insights and learning of project from this audit | Things learned from the project |
 
 
 
@@ -66,15 +67,15 @@ Uses Consensys Solidity Metrics
 
 ## Analysis of sloc of modules contracts
 
-[![Screenshot-from-2024-01-17-21-20-47.png](https://i.postimg.cc/Kcd5rL7D/Screenshot-from-2024-01-17-21-20-47.png)](https://postimg.cc/V5WMzJVJ)
+[![Screenshot-from-2024-01-18-23-18-18.png](https://i.postimg.cc/t4RDL0Lp/Screenshot-from-2024-01-18-23-18-18.png)](https://postimg.cc/KRVnMWGH)
 
 ## Analysis of sloc of Pakages contracts
 
-[![Screenshot-from-2024-01-17-21-37-29.png](https://i.postimg.cc/jqPBs7sZ/Screenshot-from-2024-01-17-21-37-29.png)](https://postimg.cc/RqCgdqJH)
+[![Screenshot-from-2024-01-18-23-15-40.png](https://i.postimg.cc/x87F96Ht/Screenshot-from-2024-01-18-23-15-40.png)](https://postimg.cc/4H615bW9)
 
 ## Analysis of sloc of Policies contracts
 
-[![Screenshot-from-2024-01-17-21-38-15.png](https://i.postimg.cc/Y0CFyF8M/Screenshot-from-2024-01-17-21-38-15.png)](https://postimg.cc/HcFjrVfh)
+[![Screenshot-from-2024-01-18-23-17-12.png](https://i.postimg.cc/J09KfGVF/Screenshot-from-2024-01-18-23-17-12.png)](https://postimg.cc/CnsjDMKC)
 
 ## Comment-to-Source Ratio:
 
@@ -167,7 +168,7 @@ vm.label(POOL_PROXY, 'lending pool');
 
 Ref:https://xin-xia.github.io/publication/icse194.pdf
 
-[![nabeel.jpg](https://i.postimg.cc/x1bHPVz4/nabeel.jpg)](https://postimg.cc/ZW4CTgj8)
+[![nabeel-1.jpg](https://i.postimg.cc/6qtBdLQW/nabeel-1.jpg)](https://postimg.cc/bDVXPnbW)
 
 - 3) Test Coverage of the protocol is around 80% which is very less, the recommended test coverage of any protocol is above 90% so it is recommended to increase the coverage to at least 90%
 
@@ -253,7 +254,6 @@ Deployment Size: 12,705
 
 
 
-
 ## e) Security Approach of the Project
 
 ### Successful current security understanding of the project;
@@ -292,8 +292,21 @@ All authorizations, including NPM passwords and authorizations, should be reserv
 https://twitter.com/Ledger/status/1735326240658100414?t=UAuzoir9uliXplerqP-Ing&s=19
 
 
+## f) Codebase Quality
 
-## f) Other Audit Reports and Automated Findings 
+Overall, I consider the quality of the ReNFT protocol codebase to be Good. The code appears to be mature and well-developed. We have noticed the implementation of various standards adhere to appropriately. Details are explained below:
+
+| Codebase Quality Categories              | Comments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Code Maintainability and Reliability** | The ReNFT Protocol contracts demonstrates good maintainability through modular structure, consistent naming, and efficient use of libraries. It also prioritizes reliability by handling errors, conducting security checks. However, for enhanced reliability, consider professional security audits and documentation improvements. Regular updates are crucial in the evolving space.                                                                                                                                                                                                                                                                                                       |
+| **Code Comments**                        | During the audit of the ReNFT contracts codebase, I found that some areas lacked sufficient internal documentation to enable independent comprehension. While comments provided high-level context for certain constructs, lower-level logic flows and variables were not fully explained within the code itself. Following best practices like NatSpec could strengthen self-documentation. As an auditor without additional context, it was challenging to analyze code sections without external reference docs. To further understand implementation intent for those complex parts, referencing supplemental documentation was necessary.                                                 |
+| **Documentation** | The ReNFT project currently lacks comprehensive documentation, with only a basic readme file(code4rena audit page) available. We strongly recommend creating a detailed Whitepaper and documentation. These documents should provide an in-depth overview of the ReNFT protocol's architecture and functions, complemented by diagrams to illustrate contract interactions and functions. This documentation is essential to help users, developers, and auditors understand and trust the ReNFT's project.
+| **Testing**                              | The audit scope of the contracts to be audited is modules, packages, Policies, Create2Deployer,  Kernel.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Code Structure and Formatting**        | The codebase contracts are well-structured and formatted. but some order of functions does not follow the Solidity Style Guide According to the Solidity Style Guide, functions should be grouped according to their visibility and ordered: constructor, receive, fallback, external, public, internal, private. Within a grouping, place the view and pure functions last.                                                                                                                                                                                                                                                                                                                  |
+| **Error**                                | Use custom errors, custom errors are available from solidity version 0.8.4. Custom errors are more easily processed in try-catch blocks, and are easier to re-use and maintain.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+
+
+## g) Other Audit Reports and Automated Findings 
 
 **Automated Findings:**
 https://github.com/code-423n4/2024-01-renft/blob/main/bot-report.md
@@ -304,13 +317,13 @@ There isn't any Previous Audit
 **4naly3er report**
 https://github.com/code-423n4/2024-01-renft/blob/main/4naly3er-report.md
 
-##  f) Packages and Dependencies Analysis 📦
+##  h) Packages and Dependencies Analysis 📦
 
 | Package | Version | Usage | 
 | --- | --- | --- | 
 | [`openzeppelin`](https://www.npmjs.com/package/@openzeppelin/contracts) | [![npm](https://img.shields.io/npm/v/@openzeppelin/contracts.svg)](https://www.npmjs.com/package/@openzeppelin/contracts) |  Project uses version `4.9.2`; consider updating to `5.0.1` 
 
-## g) New insights and learning of project from this audit:
+## i) New insights and learning of project from this audit:
 
 1. **Integration with Seaport**: The project's integration with Seaport for order processing demonstrates the complexity and potential challenges of interfacing with external protocols. This requires careful consideration of compatibility and security implications.
 
@@ -322,5 +335,7 @@ Note: I didn't tracked the time, the time I mentioned is just an estimate
 
 
 
+
+
 ### Time spent:
-5 hours
+3 hours
