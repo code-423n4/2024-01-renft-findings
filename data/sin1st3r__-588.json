@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "sin1st3r__",
+  "risk": "3",
+  "title": "An attacker can hijack any ERC1155 token he rents due to a design issue in reNFT via reentrancy exploitation",
+  "issueId": 588,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/588"
+}
