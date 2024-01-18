@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "Calling `Storage.toggleWhitelistExtension` function to change a previously whitelisted safe module, which has become vulnerable or malicious, to be non-whitelisted does not prevent renter, who is safe owner, from using such prohibited safe module",
+  "issueId": 446,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/446"
+}
