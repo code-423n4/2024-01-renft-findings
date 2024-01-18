@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "BARW",
+  "risk": "3",
+  "title": "Adding a hook that only is `onStart` will prevent a rental to be stopped resulting in the nfts and the payments to be stuck in the safe",
+  "issueId": 266,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/266"
+}
