@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xDING99YA",
+  "risk": "2",
+  "title": "There is no check in \"updateHookPath()\" and \"updateHookStatus()\" in Storage.sol to make sure the change of hook status won't affect current rental order, it can result in an active rental order cannot be stopped.",
+  "issueId": 535,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/535"
+}
