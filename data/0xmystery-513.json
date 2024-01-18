@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xmystery",
+  "risk": "2",
+  "title": "Signature Replay Risks with Static Implementation of _DOMAIN_SEPARATOR in EIP-712 Signatures",
+  "issueId": 513,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/513"
+}
