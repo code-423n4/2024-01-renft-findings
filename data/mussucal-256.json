@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "mussucal",
+  "risk": "3",
+  "title": "Disabling an already enabled module doesn't work.",
+  "issueId": 256,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/256"
+}
