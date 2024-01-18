@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "0xDING99YA",
+  "risk": "3",
+  "title": "When consideringItem contains ERC777 token, fulfiller can transfer the NFT form Safe Wallet before this rental order is registered in \"Storage.sol\".",
+  "issueId": 273,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/273"
+}
