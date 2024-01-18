@@ -174,10 +174,152 @@ Ref:https://xin-xia.github.io/publication/icse194.pdf
 # Test-case analysis of Contracts
 
 ### General Information
-- **Solc Version:** 0.8.7
-- **Optimizer Enabled:** false
-- **Runs:** 200
+- **Solc Version:** 0.8.22
 - **Block Limit:** 30,000,000 gas
+
+
+### Storage.sol: Storage contract
+
+Deployment Cost: 1,553,625
+Deployment Size: 8,094
+
+| Function Name             | Min    | Avg    | Median | Max    | # Calls |
+|---------------------------|--------|--------|--------|--------|---------|
+| INIT                      | 361    | 361    | 361    | 361    | 215     |
+| KEYCODE                   | 229    | 229    | 229    | 229    | 430     |
+| MODULE_PROXY_INSTANTIATION| 441    | 22,729 | 22,928 | 22,928 | 215     |
+| addRentalSafe             | 487    | 28,733 | 24,787 | 44,687 | 1,069   |
+| addRentals                | 1,046  | 49,008 | 51,497 | 53,997 | 40      |
+
+### Admin.sol: Admin contract
+
+Deployment Cost: 921,484
+Deployment Size: 4,670
+
+| Function Name             | Min    | Avg    | Median | Max    | # Calls |
+|---------------------------|--------|--------|--------|--------|---------|
+| changeKernel              | 795    | 795    | 795    | 795    | 2       |
+| configureDependencies     | 4,104  | 47,496 | 47,904 | 47,904 | 215     |
+| freezePaymentEscrow       | 8,093  | 33,399 | 46,052 | 46,052 | 3       |
+| freezeStorage             | 8,017  | 33,335 | 45,994 | 45,994 | 3       |
+
+### Create.sol: Create contract
+
+Deployment Cost: 2,653,662
+Deployment Size: 15,175
+
+| Function Name             | Min    | Avg    | Median | Max    | # Calls |
+|---------------------------|--------|--------|--------|--------|---------|
+| changeKernel              | 750    | 750    | 750    | 750    | 2       |
+| configureDependencies     | 4,104  | 47,496 | 47,904 | 47,904 | 215     |
+| domainSeparator          | 280    | 280    | 280    | 280    | 36      |
+| getOrderMetadataHash     | 2,272  | 2,678  | 2,272  | 4,277  | 36      |
+
+### Factory.sol: Factory contract
+
+Deployment Cost: 692,196
+Deployment Size: 3,906
+
+| Function Name             | Min    | Avg    | Median | Max    | # Calls |
+|---------------------------|--------|--------|--------|--------|---------|
+| changeKernel              | 773    | 773    | 773    | 773    | 2       |
+| configureDependencies     | 2,369  | 24,065 | 24,269 | 24,269 | 215     |
+| deployRentalSafe          | 647    | 311,013| 307,194| 334,994| 1,068   |
+| initializeRentalSafe      | 50,851 | 50,853 | 50,851 | 53,351 | 1,066   |
+
+### Guard.sol: Guard contract
+
+Deployment Cost: 1,030,196
+Deployment Size: 5,213
+
+| Function Name             | Min    | Avg    | Median | Max    | # Calls |
+|---------------------------|--------|--------|--------|--------|---------|
+| changeKernel              | 750    | 750    | 750    | 750    | 2       |
+| checkAfterExecution      | 329    | 329    | 329    | 329    | 7       |
+| checkTransaction         | 1,844  | 16,044 | 14,463 | 29,012 | 35      |
+| configureDependencies     | 2,346  | 23,941 | 24,246 | 24,246 | 216     |
+
+### Stop.sol: Stop contract
+
+Deployment Cost: 2,167,126
+Deployment Size: 12,705
+
+| Function Name             | Min    | Avg    | Median | Max    | # Calls |
+|---------------------------|--------|--------|--------|--------|---------|
+| changeKernel              | 728    | 728    | 728    | 728    | 2       |
+| configureDependencies     | 4,059  | 47,051 | 47,859 | 47,859 | 217     |
+| reclaimRentalOrder       | 8,532  | 23,159 | 28,432 | 30,932 | 13      |
+| stopRent                  | 66,457 | 106,027| 100,096| 139,512| 7       |
+
+
+
+
+## e) Security Approach of the Project
+
+### Successful current security understanding of the project;
+
+1- The project hasn't underwent any audits, this innovative assessments on Code4rena is the first, where multiple auditors are scrutinizing the code.
+
+### What the project should add in the understanding of Security;
+
+1- By distributing the project to testnets, ensuring that the audits are carried out in onchain audit. (This will increase coverage)
+
+2- Add On-Chain Monitoring System; If On-Chain Monitoring systems such as Forta are added to the project, its security will increase.
+
+For example ; This bot tracks any DEFI transactions in which wrapping, unwrapping, swapping, depositing, or withdrawals occur over a threshold amount. If transactions occur with unusually high token amounts, the bot sends out an alert. https://app.forta.network/bot/0x7f9afc392329ed5a473bcf304565adf9c2588ba4bc060f7d215519005b8303e3
+
+3- After the Code4rena audit is completed and the project is live, I recommend the audit process to continue, projects like immunefi do this. 
+https://immunefi.com/
+
+
+4- Emergency Action Plan
+In a high-level security approach, there should be a crisis handbook like the one below and the strategic members of the project should be trained on this subject and drills should be carried out. Naturally, this information and road plan will not be available to the public.
+https://docs.google.com/document/u/0/d/1DaAiuGFkMEMMiIuvqhePL5aDFGHJ9Ya6D04rdaldqC0/mobilebasic#h.27dmpkyp2k1z
+
+5- I also recommend that you have an "Economic Audit" for projects based on such complex mathematics and economic models. An example Economic Audit is provided in the link below;
+Economic Audit with [Three Sigma](https://panoptic.xyz/blog/panoptic-three-sigma-partnership)
+
+6 - As the project team, you can consider applying the multi-stage audit model.
+
+[![sla.png](https://i.postimg.cc/nhR0kN3w/sla.png)](https://postimg.cc/Sn96Q1FW)
+
+Read more about the MPA model;
+https://mpa.solodit.xyz/
+
+7 - I recommend having a masterplan applied to project team members (This information is not included in the documents).
+All authorizations, including NPM passwords and authorizations, should be reserved only for current employees. I also recommend that a definitive security constitution project be found for employees to protect these passwords with rules such as 2FA. The LEDGER hack, which has made a big impact recently, is the best example in this regard;
+
+https://twitter.com/Ledger/status/1735326240658100414?t=UAuzoir9uliXplerqP-Ing&s=19
+
+
+
+## f) Other Audit Reports and Automated Findings 
+
+**Automated Findings:**
+https://github.com/code-423n4/2024-01-renft/blob/main/bot-report.md
+
+**Previous Audits**
+There isn't any Previous Audit
+
+**4naly3er report**
+https://github.com/code-423n4/2024-01-renft/blob/main/4naly3er-report.md
+
+##  f) Packages and Dependencies Analysis 📦
+
+| Package | Version | Usage | 
+| --- | --- | --- | 
+| [`openzeppelin`](https://www.npmjs.com/package/@openzeppelin/contracts) | [![npm](https://img.shields.io/npm/v/@openzeppelin/contracts.svg)](https://www.npmjs.com/package/@openzeppelin/contracts) |  Project uses version `4.9.2`; consider updating to `5.0.1` 
+
+## g) New insights and learning of project from this audit:
+
+1. **Integration with Seaport**: The project's integration with Seaport for order processing demonstrates the complexity and potential challenges of interfacing with external protocols. This requires careful consideration of compatibility and security implications.
+
+5. **Emergency Measures**: The project's code could benefit from implementing emergency measures like circuit breakers or pause functions, particularly in critical administrative functions, to mitigate risks in case of detected vulnerabilities.
+
+
+Note: I didn't tracked the time, the time I mentioned is just an estimate
+
+
 
 
 ### Time spent:
