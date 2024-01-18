@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "mussucal",
+  "risk": "2",
+  "title": "Hooks of type onStart only can be included. Including hooks of other types throw error.",
+  "issueId": 275,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/275"
+}
