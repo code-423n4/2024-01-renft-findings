@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "hals",
+  "risk": "3",
+  "title": "Rented ERC721/ERC1155 tokens will be stuck if the lender or the renter is blocklisted by the payment token",
+  "issueId": 344,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/344"
+}
