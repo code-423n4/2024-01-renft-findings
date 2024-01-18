@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "When `selector` corresponds to `disableModule(address,address)`, `Guard._checkTransaction` function has an error for executing `_revertNonWhitelistedExtension(extension)` with `extension` being `prevModule` instead of `module`",
+  "issueId": 432,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/432"
+}
