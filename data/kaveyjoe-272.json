@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "kaveyjoe",
+  "risk": "2",
+  "title": "Kernel may not be able to migrate due to having too many keycodes or policies",
+  "issueId": 272,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/272"
+}
