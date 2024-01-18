@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "hash",
+  "risk": "3",
+  "title": "setFallbackHandler is not access controlled in Guard allowing renter's to steal rented assets",
+  "issueId": 474,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/474"
+}
