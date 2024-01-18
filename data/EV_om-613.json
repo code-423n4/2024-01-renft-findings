@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "EV_om",
+  "risk": "2",
+  "title": "`OrderMetadata` encoding breaks EIP-712 compliance",
+  "issueId": 613,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/613"
+}
