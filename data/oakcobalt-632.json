@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "oakcobalt",
+  "risk": "2",
+  "title": "If the fulfiller is USDC blacklisted and the ERC20 payment is in USDC, the offerer cannot get their NFT back",
+  "issueId": 632,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/632"
+}
