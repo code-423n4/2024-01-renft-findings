@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "KupiaSec",
+  "risk": "2",
+  "title": "Guard contract blocks native tokens being transferred out from Safe Wallet",
+  "issueId": 261,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/261"
+}
