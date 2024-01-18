@@ -7,8 +7,8 @@ The smart contract repository review identified key issues, primarily the need f
 
 | **Issue Number** | **Title** | **Number of Instances** |
 |------------------|-----------|-------------------------|
-| L-01 | Require the two arrays have the same length | 6 |
-| L-02 | Check if array object is valid or not | 7 |
+| L-01 | Require the two arrays to have the same length | 6 |
+| L-02 | Check if the array object is valid or not | 7 |
 | L-03 | Add final `else` statement with revert to avoid false emits | 1 |
 | L-04 | Add a list of known roles to choose from them instead of validating roles | 1 |
 | L-05 | Avoid using hardcoded zero value | 1 |
@@ -19,7 +19,7 @@ The smart contract repository review identified key issues, primarily the need f
 | N-03 | Emit an event on fee change | 2 |
 | N-04 | Reverting with an error is more convenient than returning address(0) | 1 |
 | N-05 | Reduce redundant code | 1 |
-## [L-01] Require the two arrays have the same length
+## [L-01] Require the two arrays to have the same length
 ### Instances
 * [Create.sol #195](https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Create.sol#L195)
 ```solidity
@@ -89,7 +89,7 @@ function _processPayOrderOffer(
     }
 ```
 
-## [L-02] Check if array object is valid or not 
+## [L-02] Check if the array object is valid or not 
 ### Instances
 
 * [Create.sol #377](https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Create.sol#L377)
@@ -153,12 +153,12 @@ function _processPayOrderOffer(
         } else if (action_ == Actions.ChangeAdmin) {
             admin = target_;
         }
-+       //add else statment and revert
++       //add else statement and revert
         emit Events.ActionExecuted(action_, target_);
     }
 ```
 
-## [L-04] Add a list of known roles to chose from them instead of validating roles
+## [L-04] Add a list of known roles to choose from them instead of validating roles
 ### Instances
 * [Kernel.sol #316](https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/Kernel.sol#L316)
 ```solidity
@@ -233,7 +233,7 @@ function _checkTransaction(address from, address to, bytes memory data) private 
 
 ## [N-02] Empty function body
 Although it is mentioned that the function is left empty, but is not implementedbefore an audit or a final release.
-Also no reason mentioned.
+Also no reason was mentioned.
 ### Instances
 * [Guard.sol #353](https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Guard.sol#L353)
 ```solidity
@@ -290,15 +290,15 @@ Also no reason mentioned.
 ```
 
 
-## [N-04] Reverting with an error is more convienent than returning address(0)
-Consider adding a revvert message like `failed to fetch` or `hook not available` instead of returning address(0) to the user for more convientnt and understandalbe logic
+## [N-04] Reverting with an error is more convenient than returning address(0)
+Consider adding a revert message like `failed to fetch` or `hook not available` instead of returning address(0) to the user for more convenient and understandable logic
 ### Instances
 * [Storage.sol #141](https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/modules/Storage.sol#L141)
 ```solidity
         return hookStatus[hook] != 0 ? hook : address(0);
 ```
 
-## [N-05] Reduce redundunt code
+## [N-05] Reduce redundant code
 Utilize the use of removeRental inside removeRentalBatch instead of repeating the same logic all over again
 ### Instances
 * [Storage.sol #244](https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/modules/Storage.sol#L244)
