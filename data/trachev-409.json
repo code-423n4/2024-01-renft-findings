@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "trachev",
+  "risk": "2",
+  "title": "A renter can be tricked into receiving nothing from a PAY order",
+  "issueId": 409,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/409"
+}
