@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "oakcobalt",
+  "risk": "2",
+  "title": "If a hook enabled by guard admin is then subsequently restricted or disabled (e.g. due to vulnerabilities), any existing rental order that uses the hook will be DOSsed and cannot be stopped",
+  "issueId": 619,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/619"
+}
