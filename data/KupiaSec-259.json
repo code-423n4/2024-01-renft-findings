@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "KupiaSec",
+  "risk": "3",
+  "title": "An attacker can prevent lenders stop their renting by reclaiming his assets from another Safe wallet.",
+  "issueId": 259,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/259"
+}
