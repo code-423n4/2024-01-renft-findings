@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "kiki",
+  "risk": "3",
+  "title": " Lack of Contract Verification in updateHookPath Function",
+  "issueId": 568,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/568"
+}
