@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "rbserver",
+  "risk": "3",
+  "title": "Lent ERC721 and ERC1155 tokens would remain in safe and ERC20 payment tokens would remain in payment escrow when order's hooks should only be used for creating but not stopping such order",
+  "issueId": 424,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/424"
+}
