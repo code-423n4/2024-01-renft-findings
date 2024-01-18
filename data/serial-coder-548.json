@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "serial-coder",
+  "risk": "2",
+  "title": "Rental stop transaction will be blocked if the payment recipient gets blacklisted",
+  "issueId": 548,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/548"
+}
