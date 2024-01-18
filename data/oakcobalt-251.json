@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "oakcobalt",
+  "risk": "2",
+  "title": "When a whitelisted extension is later de-whitelisted (e.g. due to vulnerabilities), the rental safe who had enabled the module cannot disable it because of an issue in Guard.sol",
+  "issueId": 251,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/251"
+}
