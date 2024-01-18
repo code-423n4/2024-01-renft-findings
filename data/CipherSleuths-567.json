@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "CipherSleuths",
+  "risk": "2",
+  "title": "A SINGLE MALICOUS LENDER CAN REVERT THE `Stop.stopRentBatch` TRANSACTION INSIDE THE `onERC721Received` HOOK WHILE RECEIVING THE `ERC721` TOKENS BACK",
+  "issueId": 567,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/567"
+}
