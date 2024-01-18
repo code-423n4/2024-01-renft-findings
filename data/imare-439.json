@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "imare",
+  "risk": "2",
+  "title": "If hook#onStop fails the rented items are blocked inside the wallet",
+  "issueId": 439,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/439"
+}
