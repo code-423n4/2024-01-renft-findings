@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "When a honest and non-malicious vault-like ERC721 token is offered for an order, lender can lose previously owned base tokens associated with such ERC721 token",
+  "issueId": 452,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/452"
+}
