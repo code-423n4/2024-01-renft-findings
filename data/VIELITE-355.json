@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "VIELITE",
+  "risk": "2",
+  "title": "_settlePayment would not reserve a fee if item is ERC721 or ERC1155",
+  "issueId": 355,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/355"
+}
