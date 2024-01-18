@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "AkshaySrivastav",
+  "risk": "2",
+  "title": "Unrestricted Access to `Guard::checkTransaction` allows incorrect Execution of `onTransaction` Hooks",
+  "issueId": 282,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/282"
+}
