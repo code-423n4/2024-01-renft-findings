@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "EV_om",
+  "risk": "2",
+  "title": "Renters can extend rental duration and hold lender's tokens hostage if ERC-777 is used as payment in a `PAY` order",
+  "issueId": 634,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/634"
+}
