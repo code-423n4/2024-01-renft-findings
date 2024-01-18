@@ -1,8 +1,0 @@
-{
-  "contest": 317,
-  "handle": "0xrafaelnicolau",
-  "risk": "3",
-  "title": "Malicious renter can grief the rental by burning ERC721 tokens",
-  "issueId": 367,
-  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/367"
-}
