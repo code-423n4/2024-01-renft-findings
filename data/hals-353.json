@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "hals",
+  "risk": "2",
+  "title": "Hashes created with `Signer._deriveRentalOrderHash` function is not `EIP712` compliant which results in incorrect rentalOrders hashes",
+  "issueId": 353,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/353"
+}
