@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "EV_om",
+  "risk": "3",
+  "title": "All orders can be hijacked to lock rental assets forever by tipping a malicious ERC20",
+  "issueId": 614,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/614"
+}
