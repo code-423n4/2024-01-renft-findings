@@ -124,4 +124,83 @@ As seen above, even if a hook is only intended to run on a rental creation, not 
 In `_removeHooks()`, consider only try-catch call `IHook(target).onStop()` when `STORE.hookOnStop(target)` and if `!STORE.hookOnStop(target)`, simply skip the iteration instead of reverting.
                  
 
+### Low-04: `constructor(Kernel kernel_)` has no effects when PaymentEscrow.sol is used as a logic contract.
+
+PaymentEscrow.sol and Storage.sol are both intended be implementation contracts (not proxy contracts) because they both inherit Proxiable.sol, a contract that contains upgrade logic for implementation contracts based on UUPS standard.
+
+In this case, storing kernel address in a logic contract will have no effect than actual flow, because kernel will be stored and fetched from the proxy contract. This can also be confirmed from test (test/integration/upgradeability/StorageModuleUpgrade.t.sol) where a new storage contract will need to be deployed with address(0) as a constructor argument. 
+(1)
+```solidity
+//src/modules/Storage.sol
+    constructor(Kernel kernel_) Module(kernel_) {}
+```
+(https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/modules/Storage.sol#L79)
+(2)
+```solidity
+//src/modules/PaymentEscrow.sol
+    constructor(Kernel kernel_) Module(kernel_) {}
+```
+(https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/modules/PaymentEscrow.sol#L51)
+
+**Recommendations:**
+Consider removing the constructor.
+
+
+### Low-05: The old and inactive Stop.sol policy contract cannot be disabled in the safe contract (rental wallet), even though it is no longer an active policy contract in Kernel.sol 
+
+Stop.sol policy contract is enabled upon initialization of a rental safe contract through a delegate call to `enableModule()` and has authority to transfer asset tokens ERC721/ERC1155 out of the rental safe contract. 
+
+However, when there is an upgrade to the stop policy,i.e. a new Stop.sol address is activated in Kernal and the old Stop.sol address is de-activated in Kernel. The old  stop.sol policy contract will remain as valid module for the rental safe contract. The rental safe contract cannot disable the old stop.sol address by calling `disableModule()`, because Guard.sol will check any transactions from the safe and will revert when `disableModule(extension)` is called and the extension is not a whitelisted extension. And because Stop.sol is never intended to be a whitelisted extension (it will be enabled at initialization by default for any safe), the safe cannot disable the old Stop.sol. 
+
+Although under current implementation of Stop.sol, the old Stop.sol will not be able to execute `stopRent()` or `stopRentBatch()` due to the permission access checks on Storage.sol and PaymentEscrow.sol will fail and revert a call from a de-activated Stop.sol, still it's safer to disable an outdated module contract in Safe contracts.
+
+```solidity
+//src/policies/Guard.sol
+
+    function _checkTransaction(address from, address to, bytes memory data) private view {
+        bytes4 selector;
+...
+        } else if (selector == gnosis_safe_disable_module_selector) {
+            // Load the extension address from calldata.
+            address extension = address(
+                uint160(
+                    uint256(
+                        _loadValueFromCalldata(data, gnosis_safe_disable_module_offset)
+                    )
+                )
+            );
+            // Check if the extension is whitelisted.
+            //@audit the safe contract cannot disable an outdated Stop.sol, due to failing `_revertNonWhitelistedExtension(extension)`. Stop.sol doesn't have to be whitelisted and will cause revert in the disable module flow.
+|>          _revertNonWhitelistedExtension(extension);
+
+```
+(https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Guard.sol#L266)
+
+**Recommendations:**
+Consider adding a bypass check in `_checkTransactions()` -> `else if (selector == gnosis_safe_disable_module_selector) {`, to check if the extension to be disabled is an active policy. And this can be done by querying `kernel.getPolicyIndex()` and  `kernel.activePolicies()`. 
+
+If the extension is not an active policy, consider allowing disabling the module. Note that this logic also removes the `_revertNonWhitelistedExtension()` check and assumes that as long as a module is enabled in a safe contract, the module is either a policy (stop.sol) that is enabled by default or it used to be a whitelisted module when enabled (this is already checked in `enableModule` bypass). if this is the case, then we only need to ensure it is not an active policy to allow disable it from a safe.
+
+
+### Low-06: Factory.sol might deploy a safe with old stopPolicy and guardPolicy contract addresses because it assumes stopPolicy and guardPolicy addresses will never change by storing their address as immutable.  
+
+In Factory.sol, the stop policy contract and the guard policy contract are stored as immutable variables. This assumes these two contract addresses will never change.
+
+```solidity
+//src/policies/Factory.sol
+    //@audit This assumes policy contract never changes, when policy contract change, there are risk of deploying safe with old policies and also factory has to be re-deployed to keep up with other policy contract update
+|>  Stop public immutable stopPolicy;
+|>  Guard public immutable guardPolicy;
+
+```
+(https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Factory.sol#L31-L32)
+
+However, both stop policy (Stop.sol) and guard policy (Guard.sol) can be upgraded by deploying new stop and guard contracts and deactivate the old addresses from Kernel.sol. The policy upgrade flow is: Kernel.sol - `executeAction()`->`_activatePolicy(newPolicy)`->`_deactivePolicy(oldPolicy)`.
+
+When policy contracts are upgraded, their address changes. In this case, Factory.sol will still deploy a safe with the old policy contract addresses. This opens up potential for DOS or other vulnerabilities that the outdated policy contracts may pose to a rental safe contract. Even though the new safe contract can also migrate to the new policy contracts, the owner might not do so or is not aware because deploying safe is a permissionless process.
+
+To avoid the risks above, the admin would have to deploy new Factory.sol every time there is upgrade to Stop.sol or Guard.sol, and also ensure that Factory upgrade is done in the same transaction as Stop.sol and Guard.sol, which is cumbersome and wasteful.
+
+**Recommendations:**
+In Factory.sol, do not use immutable variables to hold Stop.sol and Guard.sol addresses. Instead, consider adding an onlyKernel function to allow update of Stop and Guard addresses stored in Factory.sol.
 
