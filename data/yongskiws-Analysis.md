@@ -1,5 +1,6 @@
 #  Analysis - reNFT - Rent & Lend NFTs Protocol
 
+The FIRST and ultimate NFT rental protocol for Web3 projects. reNFT is a multi-chain protocol and platform that can be white-labelled and integrated into any project to enable collateral-free in-house renting, lending, and scholarship automation!
 
 # Overview 
 
@@ -367,6 +368,8 @@ Discussion: Allows upgrades to newer contract versions, preserving the protocol'
 ### Freeze:
 Description: Freezes contracts, preventing further contract upgrades.
 Discussion: Putting a contract in a static state is useful when you want to ensure contract stability and prevent unexpected changes.
+
+
 
 
 
