@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "serial-coder",
+  "risk": "2",
+  "title": "Denial-of-service issue on rental stop transactions",
+  "issueId": 544,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/544"
+}
