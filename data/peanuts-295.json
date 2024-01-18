@@ -1,0 +1,8 @@
+{
+  "contest": 317,
+  "handle": "peanuts",
+  "risk": "2",
+  "title": "Renter can grief the lender by blocklisting the ERC20 token for OrderType.Pay to prevent lender from getting back his NFT",
+  "issueId": 295,
+  "issueUrl": "https://github.com/code-423n4/2024-01-renft-findings/issues/295"
+}
