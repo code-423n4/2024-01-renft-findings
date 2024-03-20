@@ -2368,7 +2368,7 @@ In order to make sense of the vulnerability, we need to understand the token tra
 
 Here is the full execution flow.
 
-<img title="Execution Flow" alt="Execution Flow" width=700px height=500px src="https://i.ibb.co/41z3hgv/Screenshot-2024-01-18-at-2-13-51-AM.png">
+*Note: to view the provided image, please see the original submission [here](https://github.com/code-423n4/2024-01-renft-findings/issues/588).*
 
 ***
 
@@ -15503,7 +15503,7 @@ Any vulnerabilities that can show the same `RentPayload` being used either with 
 | https://github.com/re-nft/smart-contracts/pull/2 | M-11 | Properly implements EIP-712 |
 | https://github.com/re-nft/smart-contracts/pull/15 | M-16 | Introduces more granular controls over whitelist for extensions |
 
-## Out of Scope
+### Out of Scope
 
 [[M-03]: Risk of DoS when stoping large rental orders due to block gas limit](https://github.com/code-423n4/2024-01-renft-findings/issues/538)<br>
 [[M-07]: Upgrading modules via executeAction() will brick all existing rentals](https://github.com/code-423n4/2024-01-renft-findings/issues/397)<br>
@@ -18086,7 +18086,7 @@ https://github.com/re-nft/smart-contracts/blob/97e5753e5398da65d3d26735e9d6439c7
 
 When trying to disable a module, [it was only allowed for whitelisted modules](https://github.com/re-nft/smart-contracts/blob/3ddd32455a849c3c6dc3c3aad7a33a6c9b44c291/src/policies/Guard.sol#L255-L267). This prevented from disabling dangerous modules that have been disabled, as the transaction would revert.
 
-## Mitigation
+### Mitigation
 
 [PR-15](https://github.com/re-nft/smart-contracts/pull/15): Blacklisted extensions cant be disabled for rental:
 
